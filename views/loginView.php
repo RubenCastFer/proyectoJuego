@@ -100,7 +100,7 @@
       </div>
       <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesion" /></p>
       
-      <p class="text-white">¿No tienes una cuenta? <a href="views/signupView.php" class="text-white"  type="submit">Registrate ahora</a></p>
+      <p class="text-white">¿No tienes una cuenta? <a href="index.php?controller=usuarios&action=signUp" class="text-white"  type="submit">Registrate ahora</a></p>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </form>
   </main>

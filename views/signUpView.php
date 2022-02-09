@@ -17,8 +17,8 @@
 
   <style>
     .container {
-      background-image: url(../images/catedralygiralda.jpg);
-      background-size: 100% auto;
+      background-image: url(images/catedralygiralda.jpg);
+      background-size: auto 100%;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -86,7 +86,7 @@
 <body class="text-center container">
   
   <main class="form-signin">
-    <form method="POST" action="index.php?controller=usuarios&action=signUp">
+    <form action="index.php?controller=usuarios&action=signUp" method="POST">
       <h1 class="text-decoration-underline">TITULO</h1><br>
       <h1 class="h3 mb-3 fw-normal">Regístrate en el juego!</h1>
 

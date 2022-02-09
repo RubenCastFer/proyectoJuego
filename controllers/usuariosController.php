@@ -31,8 +31,7 @@ function login()
                         $_SESSION["usuario"] = $usuario["usuario"];
                     }
 
-                    // echo $_SESSION["usuario"];
-                    // echo $_SESSION["usuario"]." ".$_SESSION["id"];
+                    echo $_SESSION["usuario"]." ".$_SESSION["id"];
                     header("Location: ");
                 } else {
 
@@ -62,7 +61,7 @@ function signUp()
         }
     } 
 
-    include "./views/signupView.php";
+    include "./views/signUpView.php";
 }
 
 function cerrarSesion()

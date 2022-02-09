@@ -29,7 +29,7 @@ function comprobarUsuario($usuario){
 function insertaUser($usuario, $contraseña){
     try {
         $conexion=crearConexion();
-        $sqlInsert=$conexion->prepare("INSERT INTO usuario ( usuario, contraseña)  VALUES (?, ?)");
+        $sqlInsert=$conexion->prepare("INSERT INTO usuarios ( usuario, contraseña)  VALUES (?, ?)");
         $sqlInsert->bindParam(1, $usuario);
         $sqlInsert->bindParam(2, $contraseña);
         
