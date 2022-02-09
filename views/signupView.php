@@ -17,7 +17,7 @@
 
   <style>
     .container {
-      background-image: url(./images/alhambraLogin.jpg);
+      background-image: url(../images/catedralygiralda.jpg);
       background-size: 100% auto;
       background-position: center top;
       background-repeat: no-repeat;
