@@ -16,9 +16,9 @@
 
 
   <style>
-     .container {
+    .container {
       background-image: url(../images/catedralygiralda.jpg);
-      background-size: auto 100%;
+      background-size: 100% auto;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -78,12 +78,15 @@
     }
   </style>
 
+
+  <!-- Custom styles for this template -->
+  <link href="signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center container">
   
   <main class="form-signin">
-    <form method="POST" action="index.php?controller=usuarios&action=login">
+    <form method="POST" action="index.php?controller=usuarios&action=signUp">
       <h1 class="text-decoration-underline">TITULO</h1><br>
       <h1 class="h3 mb-3 fw-normal">Regístrate en el juego!</h1>
 
@@ -92,12 +95,12 @@
         <label for="floatingInput">Usuario</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control opacity-75" id="floatingPassword" placeholder="Contraseña">
+        <input type="password" name="pass" class="form-control opacity-75" id="floatingPassword" placeholder="Contraseña">
         <label for="floatingPassword">Contraseña</label>
       </div>
       <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Registrar usuario" /></p>
       
-      <p class="text-white">¿Ya estas registrado? <a href="loginView.php" class="text-white"  type="submit">Accede al Login</a></p>
+      <p class="text-white">¿Ya estas registrado? <a href="index.php?controller=usuarios&action=login" class="text-white"  type="submit">Accede al Login</a></p>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </form>
   </main>
