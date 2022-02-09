@@ -17,7 +17,7 @@ function getPuntuaciones()
 {
     $db = crearConexion();
 
-    $result = $db->query('SELECT usuario, puntuacion  AS punt
+    $result = $db->query('SELECT usuario, puntuacion AS punt
                             FROM puntuacion
                             ORDER BY punt');
     $puntuaciones = array();

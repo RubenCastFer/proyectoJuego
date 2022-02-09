@@ -15,7 +15,7 @@
         <?php foreach ($puntuaciones as $puntuacion) : ?>
             <tr>
                 <td><?php echo $puntuacion['usuario'] ?></td>
-                <td><?php echo $puntuacion['puntuacion'] ?></td>
+                <td><?php echo $puntuacion['punt'] ?></td>
             </tr>
         <?php endforeach; ?>
 
