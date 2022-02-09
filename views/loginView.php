@@ -18,7 +18,7 @@
   <style>
     .container {
       background-image: url(images/alhambraLogin.jpg);
-      background-size: 100% auto;
+      background-size: auto 100%;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -77,18 +77,27 @@
       border-top-right-radius: 0;
     }
   </style>
+<<<<<<< HEAD
 
 
   <!-- Custom styles for this template -->
 
+=======
+>>>>>>> 62b88342860220eec3726a2dc29587f8d78f03d4
 </head>
 
 <body class="text-center container">
   
   <main class="form-signin">
+<<<<<<< HEAD
     <form method="POST" action="index.php?controller=usuarios&action=signup">
       <h1 class="text-decoration-underline">TITULO</h1><br>
       <h1 class="h3 mb-3 fw-normal">Inicia Sesion</h1>
+=======
+    <form method="POST" action="index.php?controller=usuarios&action=login">
+      <h1 class="">TITULO</h1><br>
+      <h2 class="fw-normal">Iniciar sesión</h2>
+>>>>>>> 62b88342860220eec3726a2dc29587f8d78f03d4
 
       <div class="form-floating">
         <input type="text" name="usuario" class="form-control opacity-75" id="floatingInput" placeholder="¿con qué nombre quieres jugar?" required>
@@ -100,8 +109,13 @@
       </div>
       <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesion" /></p>
       
+<<<<<<< HEAD
       <p class="text-white">¿No tienes una cuenta? <a href="views/signupView.php" class="text-white"  type="submit">Registrate ahora</a></p>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+=======
+      <p class="text-white">¿No tienes una cuenta? <a href="" class="text-white"  type="submit">Registrate ahora</a></p>
+      <p class="mt-5 mb-3 text-white">&copy; 2020-2022</p>
+>>>>>>> 62b88342860220eec3726a2dc29587f8d78f03d4
     </form>
   </main>
 </body>
