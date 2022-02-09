@@ -38,7 +38,7 @@ function getPuntuacionMayorUser($id)
 
         $sql = $db->prepare("SELECT u.id, u.usuario, p.usuario, MAX(p.puntuacion)
                                 FROM usuarios u, puntuacion p
-                                WHERE u.usuario = a.id_profesor 
+                                WHERE u.usuario = p.usuario
                                 AND u.id = ?");
 
         $sql->bindParam(1, $id);
