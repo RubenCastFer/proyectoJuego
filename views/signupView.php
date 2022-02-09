@@ -16,9 +16,9 @@
 
 
   <style>
-    .container {
-      background-image: url(./images/alhambraLogin.jpg);
-      background-size: 100% auto;
+     .container {
+      background-image: url(../images/catedralygiralda.jpg);
+      background-size: auto 100%;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -78,9 +78,6 @@
     }
   </style>
 
-
-  <!-- Custom styles for this template -->
-  <link href="signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center container">
