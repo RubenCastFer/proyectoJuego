@@ -16,12 +16,12 @@
 
 
   <style>
-    .container {
+    /* .container {
       background-image: url(images/alhambraLogin.jpg);
       background-size: auto 100%;
       background-position: center top;
       background-repeat: no-repeat;
-    }
+    } */
 
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -86,7 +86,7 @@
 <body class="text-center container">
   
   <main class="form-signin">
-    <form method="POST" action="index.php?controller=usuarios&action=signup">
+    <form method="POST" action="index.php?controller=usuarios&action=login">
       <h1 class="text-decoration-underline">TITULO</h1><br>
       <h1 class="h3 mb-3 fw-normal">Inicia Sesion</h1>
 
@@ -95,7 +95,7 @@
         <label for="floatingInput">Usuario</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control opacity-75" id="floatingPassword" placeholder="Introduce tu nueva contraseña">
+        <input type="password" name="pass" class="form-control opacity-75" id="floatingPassword" placeholder="Introduce tu nueva contraseña">
         <label for="floatingPassword">Contraseña</label>
       </div>
       <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesion" /></p>

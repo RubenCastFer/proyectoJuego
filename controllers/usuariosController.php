@@ -17,25 +17,26 @@ function login()
             $contraseña = stripslashes($contraseña);
             $contraseña = htmlspecialchars($contraseña);
 
-            $personaIdContrasenya = comprobarUsuario($usuario);
-            var_dump($personaIdContrasenya);
-            if ($personaIdContrasenya == false) {
+            $persona = comprobarUsuario($usuario);
+            var_dump($persona);
+            if ($persona == false) {
                 echo "usuario incorrecto";
             } else {
-                var_dump(password_verify($contraseña, $personaIdContrasenya["contraseña"]));
-                if (password_verify($contraseña, $personaIdContrasenya["contraseña"])) {
+                var_dump(password_verify($contraseña, $persona["contraseña"]));
+                if (password_verify($contraseña, $persona["contraseña"])) {
                     //echo "usuario y contraseña correctas";
-                    $id = $personaIdContrasenya["id"];
-                    $_SESSION["id"] = $id;
-                    if (!empty($tipo)) {
-                        $_SESSION["usuario"] = $usuario["usuario"];
-                    }
+                    $id = $persona["id"];
+                    $usuario =$persona["usuario"];
+                    $_SESSION["id"] = $id;   
+                    $_SESSION["usuario"] = $usuario;
+                    
 
-                    // echo $_SESSION["usuario"];
-                    // echo $_SESSION["usuario"]." ".$_SESSION["id"];
+                    
+                    //echo $_SESSION["usuario"]." ".$_SESSION["id"];
                     header("Location: ");
                 } else {
-
+                    
+                    echo $_SESSION["usuario"]." ".$_SESSION["id"];
                     $error = "usuario y contraseña incorrectas";
                     //echo $_SESSION["usuario"]." ".$_SESSION["id"];
                 }
