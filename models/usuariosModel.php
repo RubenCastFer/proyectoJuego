@@ -25,6 +25,21 @@ function comprobarUsuario($usuario){
         return false;
     }
     }
-    
-?>
 
+function insertaUser($usuario, $contraseña){
+    try {
+        $conexion=crearConexion();
+        $sqlInsert=$conexion->prepare("INSERT INTO usuario ( usuario, contraseña)  VALUES (?, ?)");
+        $sqlInsert->bindParam(1, $usuario);
+        $sqlInsert->bindParam(2, $contraseña);
+        
+    
+       $sqlInsert->execute();
+        
+        $last_id = $conexion->lastInsertId();
+        $conexion = null;
+        return $last_id;
+    } catch (Throwable $e) {
+        echo $e;
+    }
+}

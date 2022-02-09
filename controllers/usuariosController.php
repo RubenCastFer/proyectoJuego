@@ -17,26 +17,25 @@ function login()
             $contraseña = stripslashes($contraseña);
             $contraseña = htmlspecialchars($contraseña);
 
-            $persona = comprobarUsuario($usuario);
-            var_dump($persona);
-            if ($persona == false) {
+            $personaIdContrasenya = comprobarUsuario($usuario);
+            var_dump($personaIdContrasenya);
+            if ($personaIdContrasenya == false) {
                 echo "usuario incorrecto";
             } else {
-                var_dump(password_verify($contraseña, $persona["contraseña"]));
-                if (password_verify($contraseña, $persona["contraseña"])) {
+                var_dump(password_verify($contraseña, $personaIdContrasenya["contraseña"]));
+                if (password_verify($contraseña, $personaIdContrasenya["contraseña"])) {
                     //echo "usuario y contraseña correctas";
-                    $id = $persona["id"];
-                    $usuario =$persona["usuario"];
-                    $_SESSION["id"] = $id;   
-                    $_SESSION["usuario"] = $usuario;
-                    
+                    $id = $personaIdContrasenya["id"];
+                    $_SESSION["id"] = $id;
+                    if (!empty($tipo)) {
+                        $_SESSION["usuario"] = $usuario["usuario"];
+                    }
 
-                    
-                    //echo $_SESSION["usuario"]." ".$_SESSION["id"];
+                    // echo $_SESSION["usuario"];
+                    // echo $_SESSION["usuario"]." ".$_SESSION["id"];
                     header("Location: ");
                 } else {
-                    
-                    echo $_SESSION["usuario"]." ".$_SESSION["id"];
+
                     $error = "usuario y contraseña incorrectas";
                     //echo $_SESSION["usuario"]." ".$_SESSION["id"];
                 }
@@ -44,16 +43,31 @@ function login()
         }
     } else if (!empty($_SESSION["usuario"])) {
         header("Location: ");
-    } else{
+    } else {
         session_destroy();
     }
     include "./views/loginView.php";
 }
 
-function cerrarSesion(){
+function signUp()
+{
+    require './models/usuariosModel.php';
+    $error = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (insertaUser($_POST['usuario'], password_hash($_POST['pass'], PASSWORD_DEFAULT))) {
+            $error = "<p style='color:green'>Usuario registrado correctamente.</p>";
+        } else {
+            $error = "<p style='color:red'>El usuario ya existe.</p>";
+        }
+    } 
+
+    include "./views/signupView.php";
+}
+
+function cerrarSesion()
+{
     session_start();
     session_destroy();
     header("Location: index.php?controller=usuarios&action=login");
-    
 }
-?>
