@@ -16,15 +16,9 @@
 
 
   <style>
-<<<<<<< HEAD
      .container {
       background-image: url(../images/catedralygiralda.jpg);
       background-size: auto 100%;
-=======
-    .container {
-      background-image: url(../images/catedralygiralda.jpg);
-      background-size: 100% auto;
->>>>>>> 260ffb87a472aef9665f2e036cf6e1c1383eadad
       background-position: center top;
       background-repeat: no-repeat;
     }
