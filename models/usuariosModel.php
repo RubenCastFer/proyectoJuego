@@ -1,7 +1,7 @@
 <?php
 function crearConexion(){
     $servidor="localhost";
-    $baseDatos="videojuegos"; 
+    $baseDatos="juego"; 
     $usuario= "developer";
     $pass="developer";
     try {
@@ -11,29 +11,14 @@ function crearConexion(){
     }
 }
 
-function comprobarContrasenay($usuario){
+function comprobarUsuario($usuario){
 
     try {
         $conexion = crearConexion();
-        $consulta = $conexion->prepare("SELECT `id`, `contrasenya` FROM `usuarios` WHERE `nombre` LIKE :usuario");
+        $consulta = $conexion->prepare("SELECT * FROM `usuarios` WHERE `usuario` LIKE :usuario");
         $parametros = array(":usuario" => $usuario);
         $consulta->execute($parametros);
         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-        $conexion = null;
-        return $resultado;
-    } catch (PDOException $e) {
-        return false;
-    }
-    }
-    
-    function personaTipo($id){
-    
-    try {
-        $conexion = crearConexion();
-        $consulta = $conexion->prepare("SELECT tipo FROM `usuarios` WHERE `id` = :id");
-        $parametros = array(":id" => $id);
-        $consulta->execute($parametros);
-        $resultado = $consulta->fetch();
         $conexion = null;
         return $resultado;
     } catch (PDOException $e) {

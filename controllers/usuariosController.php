@@ -12,39 +12,37 @@ function login()
             $usuario = stripslashes($usuario);
             $usuario = htmlspecialchars($usuario);
 
-            $contrasenya = $_POST["pass"];
-            $contrasenya = strip_tags($contrasenya);
-            $contrasenya = stripslashes($contrasenya);
-            $contrasenya = htmlspecialchars($contrasenya);
+            $contraseña = $_POST["pass"];
+            $contraseña = strip_tags($contraseña);
+            $contraseña = stripslashes($contraseña);
+            $contraseña = htmlspecialchars($contraseña);
 
-            $personaIdContrasenya = comprobarContrasenay($usuario);
+            $personaIdContrasenya = comprobarUsuario($usuario);
             var_dump($personaIdContrasenya);
             if ($personaIdContrasenya == false) {
                 echo "usuario incorrecto";
             } else {
-                var_dump(password_verify($contrasenya, $personaIdContrasenya["contrasenya"]));
-                if (password_verify($contrasenya, $personaIdContrasenya["contrasenya"])) {
+                var_dump(password_verify($contraseña, $personaIdContrasenya["contraseña"]));
+                if (password_verify($contraseña, $personaIdContrasenya["contraseña"])) {
                     //echo "usuario y contraseña correctas";
                     $id = $personaIdContrasenya["id"];
                     $_SESSION["id"] = $id;
-                    $tipo = personaTipo($id);
-                    var_dump($tipo);
                     if (!empty($tipo)) {
-                        $_SESSION["tipo"] = $tipo["tipo"];
+                        $_SESSION["usuario"] = $usuario["usuario"];
                     }
 
-                    //echo $_SESSION["tipo"];
-                    //echo $_SESSION["tipo"]." ".$_SESSION["id"];
-                    header("Location: index.php?controller=videoJuegos&action=listar");
+                    // echo $_SESSION["usuario"];
+                    // echo $_SESSION["usuario"]." ".$_SESSION["id"];
+                    header("Location: ");
                 } else {
 
                     $error = "usuario y contraseña incorrectas";
-                    //echo $_SESSION["tipo"]." ".$_SESSION["id"];
+                    //echo $_SESSION["usuario"]." ".$_SESSION["id"];
                 }
             }
         }
-    } else if (!empty($_SESSION["tipo"]) && $_SESSION["tipo"] == "admin") {
-        header("Location: index.php?controller=videoJuegos&action=listar");
+    } else if (!empty($_SESSION["usuario"])) {
+        header("Location: ");
     } else{
         session_destroy();
     }

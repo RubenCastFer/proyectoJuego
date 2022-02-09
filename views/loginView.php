@@ -18,7 +18,7 @@
   <style>
     .container {
       background-image: url(images/alhambraLogin.jpg);
-      background-size: 100% auto;
+      background-size: auto 100%;
       background-position: center top;
       background-repeat: no-repeat;
     }
@@ -77,18 +77,14 @@
       border-top-right-radius: 0;
     }
   </style>
-
-
-  <!-- Custom styles for this template -->
-  <link href="signin.css" rel="stylesheet">
 </head>
 
 <body class="text-center container">
   
   <main class="form-signin">
     <form method="POST" action="index.php?controller=usuarios&action=login">
-      <h1 class="text-decoration-underline">TITULO</h1><br>
-      <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
+      <h1 class="">TITULO</h1><br>
+      <h2 class="fw-normal">Iniciar sesión</h2>
 
       <div class="form-floating">
         <input type="text" name="usuario" class="form-control opacity-75" id="floatingInput" placeholder="Usuario" required>
@@ -101,7 +97,7 @@
       <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesion" /></p>
       
       <p class="text-white">¿No tienes una cuenta? <a href="" class="text-white"  type="submit">Registrate ahora</a></p>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+      <p class="mt-5 mb-3 text-white">&copy; 2020-2022</p>
     </form>
   </main>
 </body>
