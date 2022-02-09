@@ -16,12 +16,12 @@
 
 
   <style>
-    /* .container {
+    .container {
       background-image: url(images/alhambraLogin.jpg);
       background-size: auto 100%;
       background-position: center top;
       background-repeat: no-repeat;
-    } */
+    }
 
     .bd-placeholder-img {
       font-size: 1.125rem;
