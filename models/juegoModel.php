@@ -17,9 +17,9 @@ function getPuntuaciones()
 {
     $db = crearConexion();
 
-    $result = $db->query('SELECT usuario, puntuacion AS punt
-                            FROM puntuacion
-                            ORDER BY punt');
+    $result = $db->query('SELECT * 
+                            FROM puntuacion 
+                            ORDER BY puntuacion.puntuacion DESC');
     $puntuaciones = array();
     while ($puntuacion = $result->fetch(PDO::FETCH_ASSOC)) {
         $puntuaciones[] = $puntuacion;
@@ -30,16 +30,16 @@ function getPuntuaciones()
     return $puntuaciones;
 }
 
-function getPuntuacionMayorUser($id)
+function getPuntuacionUser($id)
 {
     try{
 
         $db = crearConexion();
 
-        $sql = $db->prepare("SELECT u.id, u.usuario, p.usuario, MAX(p.puntuacion)
-                                FROM usuarios u, puntuacion p
-                                WHERE u.usuario = p.usuario
-                                AND u.id = ?");
+        $sql = $db->prepare("SELECT * 
+                                FROM puntuacion 
+                                WHERE puntuacion.usuario = 'ruben' 
+                                ORDER BY puntuacion.puntuacion DESC");
 
         $sql->bindParam(1, $id);
         $sql->execute();
@@ -53,5 +53,5 @@ function getPuntuacionMayorUser($id)
     }
     $db = null;
 }
-
+//SELECT * FROM puntuacion WHERE puntuacion.usuario = 'ruben' ORDER BY puntuacion.puntuacion DESC
 ?>

@@ -2,7 +2,7 @@
 session_start();
 function listarPuntuaciones()
 {
-    require "./models/scoreModel.php";
+    require "./models/juegoModel.php";
 
     $puntuaciones = getPuntuaciones();
 
@@ -12,9 +12,9 @@ function listarPuntuaciones()
 
 function puntuacionAlta()
 {
-    require "./models/scoreModel.php";
+    require "./models/juegoModel.php";
 
-    $puntuaciones = getPuntuacionMayorUser($_SESSION['id']);
+    $puntuaciones = getPuntuacionUser($_SESSION['id']);
     var_dump($puntuaciones);
     include "./views/scoreView.php";
 }
