@@ -79,7 +79,7 @@ $(document).ready(function(){
                             
                         <img src="../images/plaza_espanya.jpg" class="d-inline-block w-100" alt="12px" height="220px" >
                         </div>
-                        
+                        <img src="../images/plaza_espanya.jpg" class="d-inline-block w-100" alt="12px" height="220px" >
                             <div class="row text-white">
                                 <button type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" onclick="location.href=''"><i class="fa fa-list">
                                         <p>juega</p>
