@@ -38,7 +38,7 @@ function getPuntuacionUser($id)
 
         $sql = $db->prepare("SELECT * 
                                 FROM puntuacion 
-                                WHERE puntuacion.usuario = 'ruben' 
+                                WHERE puntuacion.usuario = ? 
                                 ORDER BY puntuacion.puntuacion DESC");
 
         $sql->bindParam(1, $id);
