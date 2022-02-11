@@ -6,16 +6,8 @@ function listarPuntuaciones()
 
     $puntuaciones = getPuntuaciones();
 
-    include "./views/scoreView.php";
-}
+    $unaPuntuacion = getPuntuacionUser($_SESSION['id']);
 
-
-function puntuacionAlta()
-{
-    require "./models/juegoModel.php";
-
-    $puntuaciones = getPuntuacionUser($_SESSION['id']);
-    var_dump($puntuaciones);
     include "./views/scoreView.php";
 }
 
