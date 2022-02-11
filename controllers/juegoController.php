@@ -18,3 +18,7 @@ function puntuacionAlta()
     var_dump($puntuaciones);
     include "./views/scoreView.php";
 }
+
+function cartas(){
+    include "./views/cartasView.php";
+}
