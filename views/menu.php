@@ -76,6 +76,7 @@ $(document).ready(function(){
                             </svg>
                         </a>
                         <div class="container-fluid">
+                            
                         <img src="../images/plaza_espanya.jpg" class="d-inline-block w-100" alt="12px" height="220px" >
                         </div>
                         
