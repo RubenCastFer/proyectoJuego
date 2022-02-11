@@ -13,33 +13,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
+        $(document).ready(function() {
+            $("#escudo").click(function() {
+                $(this).animate({
+                    height: "300px"
+                });
+            });
+            $("#escudo").click(function() {
+                $(this).animate({
+                    height: "250px"
+                });
+            });
+        });
 
-$(document).ready(function(){
-  $("#escudo").click(function(){
-    $(this).animate({height: "300px"});
-  });
-  $("#escudo").click(function(){
-    $(this).animate({height: "250px"});
-  });
-});
-
-$(document).ready(function(){
-  $("#escudo").hover(function(){
-    $(this).fadeTo(1000, 0.4);
-  });
-});
-</script>
+        $(document).ready(function() {
+            $("#escudo").hover(function() {
+                $(this).fadeTo(1000, 0.4);
+            });
+        });
+    </script>
     <style>
-        p{
+        p {
             text-align: center;
         }
-       #escudo{
-           margin-left: 364px;
-       }
-        
-        button{
+
+        #escudo {
+            margin-left: 364px;
+        }
+
+        button {
             text-align: center;
         }
+
         .btn-circle.btn-xl {
 
             margin: 50px;
@@ -53,6 +58,9 @@ $(document).ready(function(){
             font-size: 18px;
             line-height: 1.33;
             position: center;
+        }
+        img{
+            width:100%
         }
     </style>
 </head>
@@ -68,49 +76,79 @@ $(document).ready(function(){
             <h2 class="Encabezado"></h2>
 
             <header class="p-3 bg-success text-white">
-                <div class="container-fluid">
-                    <div class="d-flex flex-wrap  justify-content-center ">
-                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                                <use xlink:href="#bootstrap"></use>
-                            </svg>
-                        </a>
-                        <div class="container-fluid">
-                            
-                        <img src="../images/plaza_espanya.jpg" class="d-inline-block w-100" alt="12px" height="220px" >
-                        </div>
-                        <img src="../images/plaza_espanya.jpg" class="d-inline-block w-100" alt="12px" height="220px" >
-                            <div class="row text-white">
-                                <button type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" onclick="location.href=''"><i class="fa fa-list">
-                                        <p>juega</p>
-                                    </i>
-                                </button>
-                                <button type="button" text-align="center" class="btn btn-secondary btn-circle btn-xl" onclick="location.href='scoreView.html'"><i class="fa fa-list">
-                                        <p>puntos</p>
-                                    </i>
-                                </button>
-                                
-                                </button>
-                                <button type="button" class="btn btn-warning text-white btn-circle btn-xl"><i class="fa fa-heart"><p>rank</p></i>
-                                </button>
-                                <button type="button" class="btn btn-danger btn-circle btn-xl" onclick="location.href='loginView.php'"><i class="fa fa-heart"><p>salir</p></i>
-                                </button>
+
+                <div class="d-flex flex-wrap  justify-content-center ">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+
+                                    <div class="carousel-item active">
+                                        <img src="../images/plaza_espanya.jpg" class="d-block w-100" alt="20px" width="50" height="400">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../images/mezquita.jpg" class="d-block w-100" alt="20px" width="50" height="400">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="../images/cadiz.jpg" class="d-block w-100" alt="20px" width="100%" height="400">
+                                    </div>
+
+
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
                             </div>
-
-                        
-                        
-                          
-                        
-                        </form>
-
-
+                        </div>
                     </div>
+
+                    <div class="row">
+                        <button type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" onclick="location.href=''"><i class="fa fa-list">
+                                <p>juega</p>
+                            </i>
+                        </button>
+                        <button type="button" text-align="center" class="btn btn-secondary btn-circle btn-xl" onclick="location.href='scoreView.html'"><i class="fa fa-list">
+                                <p>puntos</p>
+                            </i>
+                        </button>
+
+                        </button>
+                        <button type="button" class="btn btn-warning text-white btn-circle btn-xl"><i class="fa fa-heart">
+                                <p>rank</p>
+                            </i>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-circle btn-xl" onclick="location.href='loginView.php'"><i class="fa fa-heart">
+                                <p>salir</p>
+                            </i>
+                        </button>
+                    </div>
+
+
+
+
+
+                    </form>
+
+
+                </div>
             </header>
 
-                <div class="container-fluid bg-white">
-                    <p><strong>Clicka o pasa el ratón por la imagen</strong></p>
-                        <img src="../images/escudo.png" id="escudo" class="d-inline-block w-50" text-align="center" alt="12px" height="220px" >
-                        </div>
+            <div class="container-fluid bg-white">
+                <p><strong>Clicka o pasa el ratón por la imagen</strong></p>
+                <img src="../images/escudo.png" id="escudo" class="d-inline-block w-50" text-align="center" alt="12px" height="220px">
+            </div>
 
         </div>
         <!-- /.panel-body -->
