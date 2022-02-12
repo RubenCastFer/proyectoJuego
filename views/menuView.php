@@ -37,10 +37,6 @@
             text-align: center;
         }
 
-        #escudo {
-            margin-left: 364px;
-        }
-
         button {
             text-align: center;
         }
@@ -59,8 +55,9 @@
             line-height: 1.33;
             position: center;
         }
-        img{
-            width:100%
+
+        img {
+            width: 100%
         }
     </style>
 </head>
@@ -77,44 +74,49 @@
 
             <header class="p-3 bg-success text-white">
 
-                <div class="d-flex flex-wrap  justify-content-center ">
-                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
-                    </a>
-                    <div class="row">
-                        <div class="col-12 mt-3">
-                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-
-
-                                    <div class="carousel-item active">
-                                        <img src="../images/plaza_espanya.jpg" class="d-block w-100" alt="20px" width="50" height="400">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/mezquita.jpg" class="d-block w-100" alt="20px" width="50" height="400">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../images/cadiz.jpg" class="d-block w-100" alt="20px" width="100%" height="400">
-                                    </div>
-
-
-
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
+                <div class="container justify-content-center ">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img src="images/cadiz.jpg" class="d-block w-100" alt="..." height="500px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Cortes de Cádiz de 1812</h5>
+                                    <p></p> -->
                                 </div>
                             </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="images/mezquita.jpg" class="d-block w-100" alt="..." height="500px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Mezquita de Córdoba</h5>
+                                    <p></p> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="images/plaza-espana-sevilla.jpg" class="d-block w-100" alt="..." height="500px">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <!-- <h5>Plaza de España Sevilla</h5>
+                                    <p></p> -->
+                                </div>
+                            </div>
+
                         </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
 
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <button type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" onclick="location.href=''"><i class="fa fa-list">
                                 <p>juega</p>
                             </i>
@@ -134,24 +136,21 @@
                             </i>
                         </button>
                     </div>
-
-
-
-
-
                     </form>
 
 
                 </div>
             </header>
 
-            <div class="container-fluid bg-white">
-                <p><strong>Clicka o pasa el ratón por la imagen</strong></p>
-                <img src="../images/escudo.png" id="escudo" class="d-inline-block w-50" text-align="center" alt="12px" height="220px">
-            </div>
+
 
         </div>
         <!-- /.panel-body -->
+
+        <div class="container bg-white justify-content-center">
+            <p><strong>Clicka o pasa el ratón por la imagen</strong></p>
+            <img src="images/escudo.png" id="escudo" class="inline-block me-0">
+        </div>
     </div>
 </body>
 

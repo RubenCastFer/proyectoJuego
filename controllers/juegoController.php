@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+function menu(){
+    include "./views/menuView.php";
+}
+
 function listarPuntuaciones()
 {
     require "./models/juegoModel.php";
