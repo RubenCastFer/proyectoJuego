@@ -75,7 +75,7 @@
             <header class="p-3 bg-success text-white">
 
                 <div class="container justify-content-center ">
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -84,23 +84,23 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="5000">
                                 <img src="images/cadiz.jpg" class="d-block w-100" alt="..." height="500px">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <!-- <h5>Cortes de Cádiz de 1812</h5>
-                                    <p></p> -->
+                                <div class="carousel-caption d-none d-md-block" style="background-color: grey; opacity: 0.7;">
+                                    <h5>Cortes de Cádiz de 1812</h5>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="5000">
                                 <img src="images/mezquita.jpg" class="d-block w-100" alt="..." height="500px">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <!-- <h5>Mezquita de Córdoba</h5>
-                                    <p></p> -->
+                                <div class="carousel-caption d-none d-md-block" style="background-color: grey; opacity: 0.7;">
+                                    <h5>Mezquita de Córdoba</h5>
+                                    <p></p>
                                 </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="5000">
                                 <img src="images/plaza-espana-sevilla.jpg" class="d-block w-100" alt="..." height="500px">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <!-- <h5>Plaza de España Sevilla</h5>
-                                    <p></p> -->
+                                <div class="carousel-caption d-none d-md-block" style="background-color: grey; opacity: 0.7;">
+                                    <h5 >Plaza de España Sevilla</h5>
+                                    <p></p>
                                 </div>
                             </div>
 
@@ -117,24 +117,23 @@
                     </div>
 
                     <div class="row justify-content-center">
-                        <button type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" onclick="location.href=''"><i class="fa fa-list">
-                                <p>juega</p>
+                        <a type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href=''><i class="fa fa-list">
+                                <p>Juega</p>
                             </i>
-                        </button>
-                        <button type="button" text-align="center" class="btn btn-secondary btn-circle btn-xl" onclick="location.href='scoreView.html'"><i class="fa fa-list">
-                                <p>puntos</p>
+                        </a>
+                        <a type="button" text-align="center" class="btn btn-secondary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=juego&action=listarPuntuaciones'><i class="fa fa-list">
+                                <p>Puntos</p>
                             </i>
-                        </button>
+                        </a>
 
-                        </button>
-                        <button type="button" class="btn btn-warning text-white btn-circle btn-xl"><i class="fa fa-heart">
+                        <!-- <a type="button" class="btn btn-warning text-white btn-circle btn-xl"><i class="fa fa-heart">
                                 <p>rank</p>
                             </i>
-                        </button>
-                        <button type="button" class="btn btn-danger btn-circle btn-xl" onclick="location.href='loginView.php'"><i class="fa fa-heart">
-                                <p>salir</p>
+                        </a> -->
+                        <a type="button" class="btn btn-danger btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=usuarios&action=cerrarSesion'><i class="fa fa-heart">
+                                <p>Salir</p>
                             </i>
-                        </button>
+                        </a>
                     </div>
                     </form>
 

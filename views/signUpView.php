@@ -99,7 +99,12 @@
         <label for="floatingPassword">Contraseña</label>
       </div>
       <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Registrar usuario" /></p>
+      <div style="background-color: grey;">
+        <?php echo $error;?>
+      </div>
       
+      
+
       <p class="text-white">¿Ya estas registrado? <a href="index.php?controller=usuarios&action=login" class="text-white"  type="submit">Accede al Login</a></p>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </form>

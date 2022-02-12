@@ -40,6 +40,6 @@ function insertaUser($usuario, $contraseña){
         $conexion = null;
         return $last_id;
     } catch (Throwable $e) {
-        echo $e;
+        
     }
 }
