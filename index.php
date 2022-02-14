@@ -3,7 +3,7 @@
 
         define('DEFAULT_CONTROLLER', "usuarios");
 
-        define('DEFAULT_ACTION', "login");
+        define('DEFAULT_ACTION', "signUp");
 
     $controller = DEFAULT_CONTROLLER;
     if (!empty($_GET['controller'])) {
