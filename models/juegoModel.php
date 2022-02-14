@@ -30,7 +30,7 @@ function getPuntuaciones()
     return $puntuaciones;
 }
 
-function getPuntuacionUser($id)
+function getPuntuacionUser($usuario)
 {
     try{
 
@@ -41,7 +41,7 @@ function getPuntuacionUser($id)
                                 WHERE puntuacion.usuario = ? 
                                 ORDER BY puntuacion.puntuacion DESC");
 
-        $sql->bindParam(1, $id);
+        $sql->bindParam(1, $usuario);
         $sql->execute();
         $matriz = [];
         while ($score = $sql->fetch(PDO::FETCH_BOTH)) {

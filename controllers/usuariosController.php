@@ -31,9 +31,9 @@ function login()
                     //echo "usuario y contraseña correctas";
                     $id = $personaIdContrasenya["id"];
                     $_SESSION["id"] = $id;
-                    if (!empty($tipo)) {
-                        $_SESSION["usuario"] = $usuario["usuario"];
-                    }
+                    
+                        $_SESSION["usuario"] = $personaIdContrasenya["usuario"];
+                    
 
                     //echo $_SESSION["usuario"]." ".$_SESSION["id"];
                     header("Location: index.php?controller=juego&action=menu");
