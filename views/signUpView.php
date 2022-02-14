@@ -88,24 +88,18 @@
   <main class="form-signin">
     <form action="index.php?controller=usuarios&action=signUp" method="POST">
       <h1 class="text-decoration-underline">TITULO</h1><br>
-      <h1 class="h3 mb-3 fw-normal">Regístrate en el juego!</h1>
+      <h1 class="h3 mb-3 fw-normal">Inserta tu nombre para jugar!</h1>
 
       <div class="form-floating">
         <input type="text" name="usuario" class="form-control opacity-75" id="floatingInput" placeholder="Usuario" required>
-        <label for="floatingInput">Usuario</label>
+        <label for="floatingInput">Nombre</label>
       </div>
-      <div class="form-floating">
-        <input type="password" name="pass" class="form-control opacity-75" id="floatingPassword" placeholder="Contraseña">
-        <label for="floatingPassword">Contraseña</label>
-      </div>
-      <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Registrar usuario" /></p>
+      
+      <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Entrar" /></p>
       <div style="background-color: grey;">
         <?php echo $error;?>
       </div>
-      
-      
-
-      <p class="text-white">¿Ya estas registrado? <a href="index.php?controller=usuarios&action=login" class="text-white"  type="submit">Accede al Login</a></p>
+    
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
     </form>
   </main>

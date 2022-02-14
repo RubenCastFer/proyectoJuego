@@ -12,10 +12,8 @@ $(function(){
             url: './models/juegoModel.php',
             type: 'post',
             success: function (result) {
-                var json = JSON.parse(result)
-                json.forEach(element => {
-                    console.log(element);
-                });
+                var json = JSON.parse(result);
+              
                 var cuerpo = $("#mostrar");
                 cuerpo
                 var div1 = $("<div>",{"class":"row"});
