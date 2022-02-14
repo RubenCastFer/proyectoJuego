@@ -123,7 +123,7 @@
                             </div>
 
                             <div class="row justify-content-center">
-                                <a type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href=''><i class="fa fa-list">
+                                <a type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=juego&action=cartas'><i class="fa fa-list">
                                         <p>Juega</p>
                                     </i>
                                 </a>
