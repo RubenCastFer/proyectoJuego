@@ -200,7 +200,149 @@ $nivel2 = [
         "id" => 8
     ]
 ];
-$nivel3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
+$nivel3 = [
+    [
+        "name" => "alhambra",
+        "img" => "./img/alhambra.jpg",
+        "id" => 1,
+    ],
+    [
+        "name" => "cadiz",
+        "img" => "./img/cadiz.jpg",
+        "id" => 2
+    ],
+    [
+        "name" => "alhambra",
+        "img" => "./img/alhambra.jpg",
+        "id" => 1
+    ],
+
+    [
+        "name" => "mezquita",
+        "img" => "./img/mezquita.jpg",
+        "id" => 4
+    ],
+
+    [
+        "name" => "plaza españa",
+        "img" => "./img/plaza_españa.jpg",
+        "id" => 5
+    ],
+
+    [
+        "name" => "alcazar carmona",
+        "img" => "./img/alcazar_carmona.jpg",
+        "id" => 11
+    ],
+
+    [
+        "name" => "alcazar carmona",
+        "img" => "./img/alcazar_carmona.jpg",
+        "id" => 10
+    ],
+
+    [
+        "name" => "giralda",
+        "img" => "./img/giralda.jpg",
+        "id" => 3
+    ],
+
+    [
+        "name" => "catedral jerez",
+        "img" => "./img/catedral_jerez.jpg",
+        "id" => 7
+    ],
+
+    [
+        "name" => "alcazaba malaga",
+        "img" => "./img/alcazaba_malaga.jpg",
+        "id" => 6
+    ],
+
+    [
+        "name" => "alcazar carmona",
+        "img" => "./img/alcazar_carmona.jpg",
+        "id" => 10
+    ],
+
+    [
+        "name" => "mezquita",
+        "img" => "./img/mezquita.jpg",
+        "id" => 4
+    ],
+
+    [
+        "name" => "catedral ubeda",
+        "img" => "./img/catedral_ubeda.jpg",
+        "id" => 9
+    ],
+
+    [
+        "name" => "castillo aracena",
+        "img" => "./img/castillo_aracena.jpg",
+        "id" => 12
+    ],
+
+    [
+        "name" => "cadiz",
+        "img" => "./img/cadiz.jpg",
+        "id" => 2
+    ],
+
+    [
+        "name" => "alcazar carmona",
+        "img" => "./img/alcazar_carmona.jpg",
+        "id" => 11
+    ],
+
+    [
+        "name" => "plaza españa",
+        "img" => "./img/plaza_españa.jpg",
+        "id" => 5
+    ],
+
+    [
+        "name" => "castillo jaen",
+        "img" => "./img/castillo_jaen.jpg",
+        "id" => 8
+    ],
+
+    [
+        "name" => "castillo aracena",
+        "img" => "./img/castillo_aracena.jpg",
+        "id" => 12
+    ],
+
+    [
+        "name" => "catedral jerez",
+        "img" => "./img/catedral_jerez.jpg",
+        "id" => 7
+    ],
+
+    [
+        "name" => "alcazaba malaga",
+        "img" => "./img/alcazaba_malaga.jpg",
+        "id" => 6
+    ],
+
+    [
+        "name" => "giralda",
+        "img" => "./img/giralda.jpg",
+        "id" => 3
+    ],
+
+    [
+        "name" => "castillo jaen",
+        "img" => "./img/castillo_jaen.jpg",
+        "id" => 8
+    ],
+
+    [
+        "name" => "catedral ubeda",
+        "img" => "./img/catedral_ubeda.jpg",
+        "id" => 9
+    ]
+];
 
 switch ($nivel) {
     case '1':
