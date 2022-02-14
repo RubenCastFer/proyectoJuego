@@ -1,25 +1,28 @@
 $(function(){
-    $("#boton").click(function() {
-        var valorNivel=$("#nivel").val();
+
+        // var valorNivel=$("#nivel").val();
     
-        var parametros = {
-            nivel: valorNivel,
+        // var parametros = {
+        //     nivel: valorNivel,
             
     
-        };
+        // };
         $.ajax({
-            data: parametros,
+            // data: parametros,
             url: './models/juegoModel.php',
             type: 'post',
             success: function (result) {
                 var json = JSON.parse(result)
-                var cuerpo = $("#mostrarCartas")
-                cuerpo.append($("<p>", {"text":"funciona ajax"}))
-
+                json.forEach(element => {
+                    console.log(element);
+                });
+                var cuerpo = $("#mostrarCartas");
+                cuerpo.append($("<p>", {"text":"funciona ajax"}));
+                d.append($("<p>", {"text":"funciona ajax"}));
             }
 
         });
-    });
+ 
    
 
 });

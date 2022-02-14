@@ -2,8 +2,10 @@
 function crearConexion(){
     $servidor="localhost";
     $baseDatos="juego"; 
-    $usuario= "developer";
-    $pass="developer";
+    $usuario= "root";
+    $pass="root";
+    // $usuario= "developer";
+    // $pass="developer";
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {

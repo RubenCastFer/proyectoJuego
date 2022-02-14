@@ -3,8 +3,10 @@
 function crearConexion(){
     $servidor="localhost";
     $baseDatos="juego"; 
-    $usuario= "developer";
-    $pass="developer";
+    $usuario= "root";
+    $pass="root";
+    // $usuario= "developer";
+    // $pass="developer";
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
@@ -55,10 +57,10 @@ function getPuntuacionUser($usuario)
 }
 //SELECT * FROM puntuacion WHERE puntuacion.usuario = 'ruben' ORDER BY puntuacion.puntuacion DESC
 
-$nivel=$_POST["nivel"];
-
+// $nivel=$_POST["nivel"];
+$nivel=1;
 //rellenar array con fotos
-$nivel1=[];
+$nivel1=[1,2,3,4,5,6,7,8];
 $nivel2=[];
 $nivel3=[];
 
