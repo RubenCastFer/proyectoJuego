@@ -60,46 +60,44 @@ function getPuntuacionUser($usuario)
 // $nivel=$_POST["nivel"];
 $nivel=1;
 //rellenar array con fotos
-$nivel1=[{
-    name: "alhambra",
-    img: "../img/alhambra.jpg",
-    id: 1,
-  },
-  {
-    name: "cadiz",
-    img: "../img/cadiz.jpg",
-    id: 2
-  },
-  {
-    name: "alhambra",
-    img: "../img/alhambra.jpg",
-    id: 1
-  },
-  {
-    name: "mezquita",
-    img: "../img/mezquita.jpg",
-    id: 4
-  },
-  {
-    name: "giralda",
-    img: "../img/giralda.jpg",
-    id: 3
-  },
-  {
-    name: "mezquita",
-    img: "../img/mezquita.jpg",
-    id: 4
-  },
-  {
-    name: "cadiz",
-    img: "../img/cadiz.jpg",
-    id: 2
-  },
-  {
-    name: "giralda",
-    img: "../img/giralda.jpg",
-    id: 3
-  }];
+$nivel1=[[
+    name=> "alhambra",
+    img=> "./img/alhambra.jpg",
+    id=> 1,
+],
+  [name=> "cadiz",
+  img=> "./img/cadiz.jpg",
+  id=> 2]
+    
+  ,
+  [name=> "alhambra",
+  img=> "./img/alhambra.jpg",
+  id=> 1],
+  
+    [name=> "mezquita",
+    img=> "./img/mezquita.jpg",
+    id=> 4]
+  ,
+  [name=> "giralda",
+  img=> "./img/giralda.jpg",
+  id=> 3]
+    
+  ,
+  
+    [name=> "mezquita",
+    img=> "./img/mezquita.jpg",
+    id=> 4]
+  ,
+  
+    [name=> "cadiz",
+    img=> "./img/cadiz.jpg",
+    id=> 2]
+  ,
+  
+    [name=> "giralda",
+    img=> "./img/giralda.jpg",
+    id=> 3
+]];
 $nivel2=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 $nivel3=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32];
 

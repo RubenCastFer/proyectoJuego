@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
     <script src="./js/cartas.js" type="text/javascript"></script>
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 <body>
     <header class="container-fluid bg-success">
@@ -24,8 +27,10 @@
             </ul>
         </div>
     </header>
-    <div class="container" id="mostrarCartas">
-    hola
+    <div class="container" >
+        <div id="mostrar">
+
+        </div>
     </div>
     <footer class="container-fluid bg-success">
         <div>hola</div>
