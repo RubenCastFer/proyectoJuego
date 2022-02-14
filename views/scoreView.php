@@ -13,58 +13,88 @@
     <!-- mostrar puntuacion usuario maxima -->
 
 
-    <h1>Mi puntuacion</h1>
+    <h1>Mi puntuacion mas alta</h1>
 
-    <table border="1">
-        <tr>
-            <th>Usuario</th>
-            <th>Puntuacion</th>
-        </tr>
+    <div class="col-4">
+        <table class="table table-dark table-striped" border="1">
+            <tr>
+                <th>Usuario</th>
+                <th>Puntuacion</th>
+            </tr>
 
 
-        <?php //for ($i=0; $i < 10; $i++) : 
+            <?php
 
-        $contador = 0;
-        foreach ($unaPuntuacion as $puntuacion) :
-            if ($contador==1) : ?>
+            $contador = 0;
+            foreach ($unaPuntuacion as $puntuacion) :
+                if ($contador == 0) : ?>
+                    <tr>
+                        <td><?php echo $puntuacion['usuario'] ?></td>
+                        <td><?php echo $puntuacion['puntuacion'] ?></td>
+                    </tr>
+            <?php
+                endif;
+                $contador++;
+            endforeach; ?>
+
+        </table>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <!-- mostrar puntuaciones totales usuario  con desplegable-->
+
+    <h1>Todas las puntuaciones de un usuario</h1>
+
+    <div class="col-4">
+        <table class="table table-dark table-striped" border="1">
+            <tr>
+                <th>Usuario</th>
+                <th>Puntuacion</th>
+            </tr>
+
+            <?php
+
+            foreach ($unaPuntuacion as $puntuacion) : ?>
                 <tr>
                     <td><?php echo $puntuacion['usuario'] ?></td>
                     <td><?php echo $puntuacion['puntuacion'] ?></td>
                 </tr>
-        <?php
-            endif;
-            $contador++;
-        endforeach; ?>
+            <?php
 
-    </table>
+            endforeach; ?>
+
+        </table>
+    </div>
+
+
     <br><br><br><br><br><br><br><br>
-    <!-- mostrar puntuaciones totales usuario  con desplegable-->
     <!-- mostrar puntuaciones totales -->
 
     <h1>Puntuaciones todos los usuarios</h1>
 
-    <table border="1">
-        <tr>
-            <th>Usuario</th>
-            <th>Puntuacion</th>
-        </tr>
+    <div class="col-4">
+        <table class="table table-dark table-striped" border="1">
+            <tr>
+                <th>Usuario</th>
+                <th>Puntuacion</th>
+            </tr>
 
 
-        <?php //for ($i=0; $i < 10; $i++) : 
+            <?php
 
-        $contador = 0;
-        foreach ($puntuaciones as $puntuacion) :
-            if ($contador < 20) : ?>
-                <tr>
-                    <td><?php echo $puntuacion['usuario'] ?></td>
-                    <td><?php echo $puntuacion['puntuacion'] ?></td>
-                </tr>
-        <?php
-            endif;
-            $contador++;
-        endforeach; ?>
+            $contador = 0;
+            foreach ($puntuaciones as $puntuacion) :
+                if ($contador < 20) : ?>
+                    <tr>
+                        <td><?php echo $puntuacion['usuario'] ?></td>
+                        <td><?php echo $puntuacion['puntuacion'] ?></td>
+                    </tr>
+            <?php
+                endif;
+                $contador++;
+            endforeach; ?>
 
-    </table>
+        </table>
+    </div>
 </body>
 
 </html>
