@@ -57,7 +57,7 @@ function getPuntuacionUser($usuario)
 //SELECT * FROM puntuacion WHERE puntuacion.usuario = 'ruben' ORDER BY puntuacion.puntuacion DESC
 
 // $nivel=$_POST["nivel"];
-$nivel = 3;
+$nivel = 2;
 //rellenar array con fotos
 $nivel1 = [
     [
@@ -105,6 +105,8 @@ $nivel1 = [
         "id" => 3
     ]
 ];
+
+//añadir un par mas de fotos
 $nivel2 = [
     [
         "name" => "alhambra",
@@ -200,6 +202,8 @@ $nivel2 = [
         "id" => 8
     ]
 ];
+
+//alcazar carmona quitar 2
 $nivel3 = [
     [
         "name" => "alhambra",

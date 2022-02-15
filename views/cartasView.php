@@ -13,10 +13,11 @@
     <script src="./js/cartas.js" type="text/javascript"></script>
     <title>Document</title>
     <style>
+        
+        /* pregurntar a carlos el tamaño del div de las img */
         .tam{
             height: 100px;
-            width: 150px;
-            
+            width: 150px;     
         }
         .oculto{
             display: none;
