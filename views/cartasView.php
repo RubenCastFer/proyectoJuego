@@ -13,15 +13,16 @@
     <script src="./js/cartas.js" type="text/javascript"></script>
     <title>Document</title>
     <style>
-        img{
-            height: 300px;
+        .tam{
+            height: 100px;
+            width: 150px;
+            
         }
         .oculto{
             display: none;
         }
         .visible{
             display: block;
-
         }
     </style>
 </head>
@@ -36,7 +37,7 @@
             </ul>
         </div>
     </header>
-    <div class="container-fluid"  id="mostrar">
+    <div class="container"  id="mostrar">
         
     </div>
     <footer class="container-fluid bg-success">
