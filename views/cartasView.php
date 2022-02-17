@@ -25,6 +25,16 @@
         .visible{
             display: block;
         }
+        .rotar {
+            
+            transition:1s ;
+            animation: rotate 2s;
+        }
+        @keyframes rotate{
+        0%{transform:rotateY(0deg);}
+       
+        100%{transform:rotateY(180deg);}
+        }
     </style>
 </head>
 <body>
