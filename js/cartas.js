@@ -42,20 +42,37 @@ $(function(){
                 var click=0;
                 var foto1;
                 var foto2;
+                //al hacer click sobre la imagen
                 $("img").click(function(){
-                    //console.log($(this).parent().attr("class"));
+                    console.log($(this).parent().attr("class"));
                     //console.log($(this).parent().next().children().attr("class"));
+                    
+                    //si no esta dada la vuelta se gira y añade 1 al contador de click si no, no actua
                     if ($(this).parent().attr("class")=="atras tam visible" ) {
                         click++;
                         $(this).parent().next().removeClass("oculto");
                         $(this).parent().removeClass("visible");
                         $(this).parent().next().addClass("visible")
                         $(this).parent().addClass("oculto");
+                        
+                        //recopilamos las clases de cartas que se daran la vuelta(1,2) y se comparan 
                         if (click==1) {
                             foto1=$(this).parent().next().children().attr("class");
                         }else if(click==2){
                             click=0;
                             foto2=$(this).parent().next().children().attr("class");
+                            var iguales=compararCartas(foto1,foto2);
+                            if (iguales) {
+                                foto1="";
+                                foto2="";
+                            }else{
+                                foto1="";
+                                foto2="";
+                                if($("img").parent().attr("class")=="frente tam visible"){
+
+                                }
+                                
+                            }
                         }
                     }
                     
@@ -63,7 +80,7 @@ $(function(){
                     console.log("foto2 = "+foto2);
 
                     
-
+                    
                     // $(this).parent().next().removeClass("oculto");
                     // $(this).parent().removeClass("visible");
                     // $(this).parent().next().addClass("visible")
@@ -86,3 +103,11 @@ $(function(){
    
 
 });
+
+function compararCartas(a,b){
+    if (a==b) {
+        return true;
+    } else{
+        return false;
+    }
+}
