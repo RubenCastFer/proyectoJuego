@@ -29,7 +29,7 @@ $(function () {
 
                 div1.append(div2);
                 var divImg1 = $("<div>", { "class": "frente tam oculto" })
-                var img1 = $("<img>", { "src": json[contador].img, "class": "w-100 h-100 " + json[contador].id })
+                var img1 = $("<img>", { "src": json[contador].img, "class": "w-100 h-100 " + json[contador].id, "alt":json[contador].name })
                 divImg1.append(img1);
                 var divImg2 = $("<div>", { "class": "atras tam visible" })
                 var img2 = $("<img>", { "src": "./img/andalucia.png", "class": "w-100 h-100" })
@@ -67,14 +67,15 @@ $(function () {
                                 click = 0;
                                 //console.log(click);
                                 foto2 = $(this).parent().next().children();
-                                
+                               
                                 //Comparo que las dos fotos vueltas sean iguales
                                 if (foto1.attr("class") == foto2.attr("class")) {
                                     // foto1 = "";
                                     // foto2 = "";
-
+                                  
+                                   swal(foto1.attr("alt"));
                                     //añadir puntuacion y un span con el nombre;
-
+                                   
                                 } else {
                                     foto1.parent().addClass("rotar");
                                     foto2.parent().addClass("rotar");
