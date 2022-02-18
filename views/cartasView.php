@@ -14,6 +14,9 @@
     <script src="./js/cartas.js" type="text/javascript"></script>
     <title>Document</title>
     <style>
+        .col-12{
+            text-align: center;
+        }
         
         /* pregurntar a carlos el tamaño del div de las img */
         .tam{
@@ -31,6 +34,9 @@
             transition:1s ;
             animation: rotate 2s;
         }
+        footer{
+            text-align: center;
+        }
         @keyframes rotate{
         0%{transform:rotateY(0deg);}
        
@@ -40,21 +46,21 @@
 </head>
 <body>
     <header class="container-fluid bg-success">
-    <div class="col-12"><h1>Encuentra las parejas</h1></div>
-        <div class="row">
-            <ul class="" style="list-style-type: none">
-                <li id="putuacion">Puntuacio</li>
-                <li id="intentos">Intentos</li>
-                <li id="vidas">Vidas</li>
-            </ul>
-        </div>
+    <div class="col-12 "><h1>Encuentra las parejas</h1></div>
+       
     </header>
     <div class="container"  id="mostrar">
         
     </div>
     <footer class="container-fluid bg-success">
-        <div>hola</div>
+         <div class="row">
+            <ul class="" style="list-style-type: none">
+                <li ><h5 id="puntuacion">Puntuacion</h5></li>
+                <li ><h5 id="intentos">Intentos</h5></li>
+                <li><h5 id="vidas">Vidas</h5></li>
+            </ul>
+        </div>
         <p id="nivel" style="visibility: hidden;">1</p>
-    </footer>
+  </footer>
 </body>
 </html>
