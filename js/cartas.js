@@ -79,6 +79,11 @@ $(function () {
                                     
                                   
                                    puntuacion+=100;
+                                   var cantidad=(json.length/2)*100;
+
+                                   if (puntuacion==cantidad){
+                                    swal("has pasado de nivel, máquina, mastodonte, figura,");
+                                   }
                                    
                                    liPunt.innerHTML="puntuacion " +puntuacion;
                                    console.log(puntuacion);
@@ -109,6 +114,7 @@ $(function () {
                                        if(intentos<=limite){ 
                                            
                                         swal("eres un pringao", "ni esta aciertas", "vaya malito");
+                                        location.reload();
                                        }
 
                                         //quitar intento y si los intentos llegan a 0 restar una vida
