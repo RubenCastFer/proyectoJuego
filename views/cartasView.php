@@ -61,6 +61,6 @@
             </ul>
         </div>
         <p id="nivel" style="visibility: hidden;">1</p>
-  </footer>
+     </footer>
 </body>
 </html>

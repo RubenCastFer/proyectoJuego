@@ -121,7 +121,7 @@ $nivel1 = [
         "name" => "Puente de Ronda",
         "img" => "./img/ronda.jpg",
         "id" => 6
-    ],
+    ],  
 
     [
         "name" => "giralda",
