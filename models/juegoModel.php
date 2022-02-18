@@ -77,6 +77,12 @@ $nivel1 = [
     ],
 
     [
+        "name" => "Puente de Ronda",
+        "img" => "./img/ronda.jpg",
+        "id" => 6
+    ],
+
+    [
         "name" => "mezquita",
         "img" => "./img/mezquita.jpg",
         "id" => 4
@@ -94,9 +100,27 @@ $nivel1 = [
     ],
 
     [
+        "name" => "La Maestranza de Sevilla",
+        "img" => "./img/la maestranza.jpg",
+        "id" => 5
+    ],
+
+    [
         "name" => "cadiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
+    ],
+
+    [
+        "name" => "La Maestranza de Sevilla",
+        "img" => "./img/la maestranza.jpg",
+        "id" => 5
+    ],
+
+    [
+        "name" => "Puente de Ronda",
+        "img" => "./img/ronda.jpg",
+        "id" => 6
     ],
 
     [

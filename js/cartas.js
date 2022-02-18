@@ -10,7 +10,7 @@ const limite = 0
 $(function () {
 
     var parametros = {
-         nivel: nivel,
+        nivel: nivel,
 
 
     };
@@ -73,16 +73,23 @@ $(function () {
                                 if (foto1.attr("class") == foto2.attr("class")) {
                                     // foto1 = "";
                                     // foto2 = "";
+
                                     var liPunt = document.getElementById("puntuacion");
 
 
                                     puntuacion += 100;
+                                    var cantidad = (json.length / 2) * 100;
+
+                                    if (puntuacion == cantidad) {
+                                        swal("has pasado de nivel, máquina, mastodonte, figura,");
+                                    }
 
                                     liPunt.innerHTML = "puntuacion " + puntuacion;
                                     console.log(puntuacion);
                                     swal(foto1.attr("alt"));
                                     sessionStorage.setItem("vida", vida);
                                     sessionStorage.setItem("nivel", nivel++);
+                                    setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
                                     //añadir puntuacion y un span con el nombre;
 
 
@@ -105,13 +112,15 @@ $(function () {
                                         foto2.parent().removeClass("visible");
                                         foto2.parent().prev().addClass("visible");
                                         foto2.parent().addClass("oculto");
+
                                         if (intentos <= limite) {
 
                                             swal("eres un pringao", "ni esta aciertas", "vaya malito");
                                             sessionStorage.setItem("vida", --vida);
                                             sessionStorage.setItem("nivel", "1");
-
+                                            setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
                                         }
+
 
                                         //quitar intento y si los intentos llegan a 0 restar una vida
                                     }, 1000);
