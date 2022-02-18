@@ -114,7 +114,8 @@ $(function () {
                                        if(intentos<=limite){ 
                                            
                                         swal("eres un pringao", "ni esta aciertas", "vaya malito");
-                                        location.reload();
+                                        
+                            setTimeout  (function()  {window.location.href="index.php?controller=juego&action=cartas";}, 2000);
                                        }
 
                                         //quitar intento y si los intentos llegan a 0 restar una vida
