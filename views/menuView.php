@@ -128,6 +128,10 @@
                                         <p>Juega</p>
                                     </i>
                                 </a>
+                                <script>
+                                    sessionStorage.setItem("vida", "3");
+                                    sessionStorage.setItem("nivel", "1");
+                                </script>
                                 <a type="button" text-align="center" class="btn btn-secondary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=juego&action=listarPuntuaciones'><i class="fa fa-list">
                                         <p>Puntos</p>
                                     </i>
