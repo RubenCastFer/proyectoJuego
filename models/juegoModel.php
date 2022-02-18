@@ -57,7 +57,7 @@ function getPuntuacionUser($usuario)
 //SELECT * FROM puntuacion WHERE puntuacion.usuario = 'ruben' ORDER BY puntuacion.puntuacion DESC
 
 // $nivel=$_POST["nivel"];
-$nivel = 2;
+$nivel = 1;
 //rellenar array con fotos
 $nivel1 = [
     [

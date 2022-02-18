@@ -17,7 +17,7 @@ $(function () {
         type: 'post',
         success: function (result) {
             var json = JSON.parse(result);
-
+            json.sort(() => Math.random() - 0.5);
             var cuerpo = $("#mostrar");
             cuerpo
             var div1 = $("<div>", { "class": "row" });
