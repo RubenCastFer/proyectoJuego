@@ -2,6 +2,9 @@
             var click = 0;
             var foto1;
             var foto2;
+            var puntuacion=0;
+            var intentos=8;
+            const limite= 0
 $(function () {
 
     // var valorNivel=$("#nivel").val();
@@ -72,11 +75,23 @@ $(function () {
                                 if (foto1.attr("class") == foto2.attr("class")) {
                                     // foto1 = "";
                                     // foto2 = "";
+                                    var liPunt=document.getElementById("puntuacion");
+                                    
                                   
+                                   puntuacion+=100;
+                                   
+                                   liPunt.innerHTML="puntuacion " +puntuacion;
+                                   console.log(puntuacion);
                                    swal(foto1.attr("alt"));
+                                  
                                     //añadir puntuacion y un span con el nombre;
                                    
+                                   
                                 } else {
+                                    intentos--;
+                                    var liInt=document.getElementById("intentos");
+                                    liInt.innerHTML="intentos " +intentos;
+                                  
                                     foto1.parent().addClass("rotar");
                                     foto2.parent().addClass("rotar");
                                     setTimeout(() => {
@@ -91,6 +106,10 @@ $(function () {
                                         foto2.parent().removeClass("visible");
                                         foto2.parent().prev().addClass("visible");
                                         foto2.parent().addClass("oculto");
+                                       if(intentos<=limite){ 
+                                           
+                                        swal("eres un pringao", "ni esta aciertas", "vaya malito");
+                                       }
 
                                         //quitar intento y si los intentos llegan a 0 restar una vida
                                     }, 1000);
