@@ -13,6 +13,12 @@ const limite = 0
 
 
 $(function () {
+    $("alt").animate({
+        left: '10px',
+        opacity: '0.5',
+        height: '12px',
+        width: '12px'
+      });
 
 
     var mostrarVida = document.getElementById("vidas");
@@ -27,6 +33,8 @@ $(function () {
     var parametros = {
         nivel: nivel,
 
+
+      
 
     };
     $.ajax({
@@ -94,17 +102,20 @@ $(function () {
 
                                     if (puntuacion == cantidad) {
                                         //no esta saltando
-                                        swal("has pasado de nivel, máquina, mastodonte, figura,");
+                                        alert("has pasado de nivel", "máquina", "mastodonte");
+                                        swal("has pasado de nivel", "máquina", "mastodonte");
                                         sessionStorage.setItem("vida", vida);
                                         sessionStorage.setItem("nivel", ++nivel);
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
                                     }
-
+                                  
 
                                     swal(foto1.attr("alt"));
                                     //añadir puntuacion y un span con el nombre;
 
+                                  
+                                   
 
                                 } else {
                                     intentos--;

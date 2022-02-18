@@ -61,40 +61,40 @@ $nivel=$_POST["nivel"];
 //rellenar array con fotos
 $nivel1 = [
     [
-        "name" => "alhambra",
+        "name" => "La Alhambra, Granada",
         "img" => "./img/alhambra.jpg",
         "id" => 1,
     ],
     [
-        "name" => "cadiz",
+        "name" => "Catedral de Cádiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
     ],
     [
-        "name" => "alhambra",
+        "name" => "La Alhambra, Granada",
         "img" => "./img/alhambra.jpg",
         "id" => 1
     ],
 
     [
-        "name" => "Puente de Ronda",
+        "name" => "Puente y Tajo de Ronda (Málaga)",
         "img" => "./img/ronda.jpg",
         "id" => 6
     ],
 
     [
-        "name" => "mezquita",
+        "name" => "La Mezquita, Córdoba",
         "img" => "./img/mezquita.jpg",
         "id" => 4
     ],
     [
-        "name" => "giralda",
+        "name" => "La Giralda, Sevilla",
         "img" => "./img/giralda.jpg",
         "id" => 3
     ],
 
     [
-        "name" => "mezquita",
+        "name" => "La Mezquita, Córdoba",
         "img" => "./img/mezquita.jpg",
         "id" => 4
     ],
@@ -106,7 +106,7 @@ $nivel1 = [
     ],
 
     [
-        "name" => "cadiz",
+        "name" => "Catedral de Cádiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
     ],
@@ -118,13 +118,13 @@ $nivel1 = [
     ],
 
     [
-        "name" => "Puente de Ronda",
+        "name" => "Puente y Tajo de Ronda (Málaga)",
         "img" => "./img/ronda.jpg",
         "id" => 6
     ],  
 
     [
-        "name" => "giralda",
+        "name" => "La Giralda, Sevilla",
         "img" => "./img/giralda.jpg",
         "id" => 3
     ]
