@@ -2,12 +2,27 @@ var ejec = 0;
 var click = 0;
 var foto1;
 var foto2;
+
 var vida = sessionStorage.getItem("vida");
 var nivel = sessionStorage.getItem("nivel");
+
 var puntuacion = 0;
 var intentos = 8;
 const limite = 0
+
+
+
 $(function () {
+
+
+    var mostrarVida = document.getElementById("vidas");
+    mostrarVida.innerHTML = "Vida " + vida;
+
+    var mostrarIntentos = document.getElementById("intentos");
+    mostrarIntentos.innerHTML = "Intentos " + intentos;
+
+    var liPunt = document.getElementById("puntuacion");
+    liPunt.innerHTML = "puntuacion " + puntuacion;
 
     var parametros = {
         nivel: nivel,
@@ -21,31 +36,29 @@ $(function () {
         success: function (result) {
             var json = JSON.parse(result);
             json.sort(() => Math.random() - 0.5);
+
             var cuerpo = $("#mostrar");
-            cuerpo
+
             var div1 = $("<div>", { "class": "row" });
             cuerpo.append(div1);
-            var contador = 0;
-            for (let i = 0; i < json.length; i++) {
-                var div2 = $("<div>", { "class": " col-2 mb-4 mt-4 card-grid" });
 
+            for (let i = 0; i < json.length; i++) {
+
+                var div2 = $("<div>", { "class": " col-2 mb-4 mt-4 card-grid" });
                 div1.append(div2);
+
                 var divImg1 = $("<div>", { "class": "frente tam oculto" })
-                var img1 = $("<img>", { "src": json[contador].img, "class": "w-100 h-100 " + json[contador].id, "alt": json[contador].name })
+                var img1 = $("<img>", { "src": json[i].img, "class": "w-100 h-100 " + json[i].id, "alt": json[i].name })
                 divImg1.append(img1);
+
                 var divImg2 = $("<div>", { "class": "atras tam visible" })
                 var img2 = $("<img>", { "src": "./img/andalucia.png", "class": "w-100 h-100" })
                 divImg2.append(img2);
 
                 div2.append(divImg2);
                 div2.append(divImg1);
-
-
-                contador++
-
-
             }
-
+            const cantidad = (json.length / 2) * 100;
             //al hacer click sobre la imagen
             $("img").click(function (event) {
                 if (ejec == 0) {
@@ -73,39 +86,23 @@ $(function () {
                                 if (foto1.attr("class") == foto2.attr("class")) {
                                     // foto1 = "";
                                     // foto2 = "";
-<<<<<<< HEAD
-                                    var liPunt=document.getElementById("puntuacion");
-                                    
-                                  
-                                   puntuacion+=300;
-                                   
-                                   if (puntuacion=600){
-                                    swal("has pasado de nivel, máquina, mastodonte, figura");
-                                   }
-                                   
-                                   liPunt.innerHTML="puntuacion " +puntuacion;
-                                   console.log(puntuacion);
-                                   swal(foto1.attr("alt"));
-                                  
-=======
-
-                                    var liPunt = document.getElementById("puntuacion");
 
 
+                                    liPunt = document.getElementById("puntuacion");
                                     puntuacion += 100;
-                                    var cantidad = (json.length / 2) * 100;
+                                    liPunt.innerHTML = "puntuacion " + puntuacion;
 
                                     if (puntuacion == cantidad) {
+                                        //no esta saltando
                                         swal("has pasado de nivel, máquina, mastodonte, figura,");
                                         sessionStorage.setItem("vida", vida);
-                                        sessionStorage.setItem("nivel", nivel++);
+                                        sessionStorage.setItem("nivel", ++nivel);
+                                        setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+
                                     }
 
-                                    liPunt.innerHTML = "puntuacion " + puntuacion;
-                                    console.log(puntuacion);
-                                    swal(foto1.attr("alt"));
 
->>>>>>> 300721f8358957986cec98855c451efdc2853fec
+                                    swal(foto1.attr("alt"));
                                     //añadir puntuacion y un span con el nombre;
 
 
