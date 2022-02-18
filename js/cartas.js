@@ -78,11 +78,10 @@ $(function () {
                                     var liPunt=document.getElementById("puntuacion");
                                     
                                   
-                                   puntuacion+=100;
-                                   var cantidad=(json.length/2)*100;
-
-                                   if (puntuacion==cantidad){
-                                    swal("has pasado de nivel, máquina, mastodonte, figura,");
+                                   puntuacion+=300;
+                                   
+                                   if (puntuacion=600){
+                                    swal("has pasado de nivel, máquina, mastodonte, figura");
                                    }
                                    
                                    liPunt.innerHTML="puntuacion " +puntuacion;
