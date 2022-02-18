@@ -82,14 +82,14 @@ $(function () {
 
                                     if (puntuacion == cantidad) {
                                         swal("has pasado de nivel, máquina, mastodonte, figura,");
+                                        sessionStorage.setItem("vida", vida);
+                                        sessionStorage.setItem("nivel", nivel++);
                                     }
 
                                     liPunt.innerHTML = "puntuacion " + puntuacion;
                                     console.log(puntuacion);
                                     swal(foto1.attr("alt"));
-                                    sessionStorage.setItem("vida", vida);
-                                    sessionStorage.setItem("nivel", nivel++);
-                                    setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+
                                     //añadir puntuacion y un span con el nombre;
 
 
