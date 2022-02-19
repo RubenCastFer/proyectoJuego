@@ -161,7 +161,7 @@ $(function () {
                                             },   function () {
                                               
                                                 // La decodificamos
-                                                setTimeout(function () { window.location.href = "index.php?controller=&action=listarPuntuacion"; }, 2000);
+                                                setTimeout(function () { window.location.href = "index.php?controller=usuarios=&action=listarPuntuacion"; }, 2000);
                                             })
 
 
