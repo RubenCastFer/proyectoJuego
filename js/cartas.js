@@ -18,7 +18,7 @@ $(function () {
         opacity: '0.5',
         height: '12px',
         width: '12px'
-      });
+    });
 
 
     var mostrarVida = document.getElementById("vidas");
@@ -34,7 +34,7 @@ $(function () {
         nivel: nivel,
 
 
-      
+
 
     };
     $.ajax({
@@ -109,13 +109,13 @@ $(function () {
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
                                     }
-                                  
+
 
                                     swal(foto1.attr("alt"));
                                     //añadir puntuacion y un span con el nombre;
 
-                                  
-                                   
+
+
 
                                 } else {
                                     intentos--;
@@ -140,14 +140,29 @@ $(function () {
                                         if (intentos <= limite) {
 
                                             swal("eres un pringao", "ni esta aciertas", "vaya malito");
-                                            
+
 
                                             sessionStorage.setItem("vida", --vida);
                                             sessionStorage.setItem("nivel", "1");
                                             setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
                                         }
 
+                                        if (vida == 0) {
+                                            // no funciona arreglar q guarde puntuacion en tabla
+                                            var parametros2 = {
+                                                puntuacion: puntuacion
+                                            };
+                                            $.post({
+                                                data: parametros2,
+                                                url: './controllers/juegoController.php',
+                                                type: 'post',
+                                                success: function (data) {
+                                                    window.location.href = "index.php?controller=juego&action=listarPuntuaciones";
+                                                }
+                                            })
 
+
+                                        }
                                         //quitar intento y si los intentos llegan a 0 restar una vida
                                     }, 1000);
                                 }

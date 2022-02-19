@@ -1,23 +1,35 @@
 <?php
 session_start();
 
-function menu(){
+function menu()
+{
     include "./views/menuView.php";
 }
 
 function listarPuntuaciones()
 {
     require "./models/juegoModel.php";
-
-    var_dump($_SESSION['usuario']);
+    $usuario = $_SESSION['usuario'];
+    var_dump($_POST['puntuacion']);
+    if(isset($_POST['puntuacion'])) {
+        updatePuntuacionUser($usuario, $puntuacion);
+        
+    }
+    
     $puntuaciones = getPuntuaciones();
 
-    $unaPuntuacion = getPuntuacionUser($_SESSION['usuario']);
+    $unaPuntuacion = getPuntuacionUser($usuario);
 
     include "./views/scoreView.php";
 }
 
-function cartas(){
+function cartas()
+{
+    
+    
+
     include "./views/cartasView.php";
+
     //llamar a arrays en un php para cada nivel, con ayax lo cargamos y creamos el tablero ramdom y que repita cada imagen 2 veces.    
 }
+

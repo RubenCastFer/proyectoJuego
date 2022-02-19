@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        /*$(document).ready(function() {
             $("#escudo").click(function() {
                 $(this).animate({
                     height: "300px"
@@ -31,15 +31,15 @@
             $("#escudo").hover(function() {
                 $(this).fadeTo(1000, 0.4);
             });
-        });
+        });*/
     </script>
     <style>
-        p {
+        span {
             text-align: center;
         }
 
-        button {
-            text-align: center;
+        .btn {
+            padding-top: 30px;
         }
 
         .btn-circle.btn-xl {
@@ -47,12 +47,12 @@
             margin: 50px;
             align-items: center;
             justify-content: center;
-
-            width: 70px;
-            height: 70px;
+        
+            width: 100px;
+            height: 100px;
             text-align: center;
-            border-radius: 15px;
-            font-size: 18px;
+            border-radius: 50px;
+            font-size: 25px;
             line-height: 1.33;
             position: center;
         }
@@ -60,108 +60,116 @@
         img {
             width: 100%
         }
+
+        body {
+            margin: 5px;
+        }
+
+        .carousel-caption {
+            right: 0%;
+            left: 0%;
+        }
+
+        h4 {
+            color: white;
+            font-weight: bold;
+
+        }
+
+        #escudo {
+            width: 15%;
+        }
+
+        body {
+            background-color: #52BE80;
+        }
     </style>
 </head>
 
 <body>
-    <div class="panel panel-default">
-        <div class="panel-heading">
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="5000">
+                                    <img src="images/cadiz.jpg" class="d-block w-100 rounded-3" alt="..." height="500px">
+                                    <div class="carousel-caption d-none d-md-block" style="background-color: #52BE80; opacity: 0.5; width: 100%">
+                                        <h4>Cortes de Cádiz de 1812</h4>
 
-        </div>
-        <!-- /.panel-heading -->
-        <div class="panel-body">
-
-            <h2 class="Encabezado"></h2>
-
-            <header class="p-3 bg-success text-white">
-
-
-                <header class="p-3 bg-success text-white">
-
-
-
-                    <div class="row">
-                        <div class="col-12 mt-3">
-                            <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
                                 </div>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="5000">
-                                        <img src="images/cadiz.jpg" class="d-block w-100" alt="..." height="500px">
-                                        <div class="carousel-caption d-none d-md-block" style="background-color: grey; opacity: 0.7;">
-                                            <h5>Cortes de Cádiz de 1812</h5>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="5000">
-                                        <img src="images/mezquita.jpg" class="d-block w-100" alt="..." height="500px">
-                                        <div class="carousel-caption d-none d-md-block" style="background-color: grey; opacity: 0.7;">
-                                            <h5>Mezquita de Córdoba</h5>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="5000">
-                                        <img src="images/plaza-espana-sevilla.jpg" class="d-block w-100" alt="..." height="500px">
-                                        <div class="carousel-caption d-none d-md-block" style="background-color: grey; opacity: 0.7;">
-                                            <h5>Plaza de España Sevilla</h5>
-                                            <p></p>
-                                        </div>
-                                    </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="images/mezquita.jpg" class="d-block w-100 rounded-3" alt="..." height="500px">
+                                    <div class="carousel-caption d-none d-md-block" style="background-color: #52BE80; opacity: 0.5;">
+                                        <h4>Mezquita de Córdoba</h4>
 
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="images/plaza-espana-sevilla.jpg" class="d-block w-100 rounded-3" alt="..." height="500px">
+                                    <div class="carousel-caption d-none d-md-block" style="background-color: #52BE80; opacity: 0.5;">
+                                        <h4>Plaza de España Sevilla</h4>
+
+                                    </div>
                                 </div>
 
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
                             </div>
 
-                            <div class="row justify-content-center">
-                                <a type="button" text-align="center" class="btn btn-primary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=juego&action=cartas'><i class="fa fa-list">
-                                        <p>Juega</p>
-                                    </i>
-                                </a>
-                                <script>
-                                    sessionStorage.setItem("vida", "3");
-                                    sessionStorage.setItem("nivel", "1");
-                                </script>
-                                <a type="button" text-align="center" class="btn btn-secondary btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=juego&action=listarPuntuaciones'><i class="fa fa-list">
-                                        <p>Puntos</p>
-                                    </i>
-                                </a>
-
-                                <!-- <a type="button" class="btn btn-warning text-white btn-circle btn-xl"><i class="fa fa-heart">
-                                <p>rank</p>
-                            </i>
-                        </a> -->
-                                <a type="button" class="btn btn-danger btn-circle btn-xl" style="display: flex; align-items: center; justify-content: center;" href='index.php?controller=usuarios&action=cerrarSesion'><i class="fa fa-heart">
-                                        <p>Salir</p>
-                                    </i>
-                                </a>
-                            </div>
-                            </form>
-
-
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                </header>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-body">
 
 
+                <div class="row">
+                    <div class="col-12 ">
 
-        </div>
-        <!-- /.panel-body -->
+                        <div class="row justify-content-center align-items-center">
+                            <img src="images/escudo.png" id="escudo" class="inline-block m-auto pt-3">
 
-        <div class="container bg-white justify-content-center">
-            <p><strong>Clicka o pasa el ratón por la imagen</strong></p>
-            <img src="images/escudo.png" id="escudo" class="inline-block me-0">
+                            <a type="button" class="btn btn-primary btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=cartas'><span>Jugar</span></a>
+
+                            <a type="button" class="btn btn-secondary btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=listarPuntuaciones'>Puntos</a>
+
+                            <a type="button" class="btn btn-danger btn-circle btn-xl btn-outline-light" href='index.php?controller=usuarios&action=cerrarSesion'>Salir</a>
+
+                            <img src="images/escudo.png" id="escudo" class="inline-block m-auto pt-3">
+                        </div>
+
+                    </div>
+                </div>
+
+                <script>
+                    sessionStorage.setItem("vida", "3");
+                    sessionStorage.setItem("nivel", "1");
+                </script>
+
+
+            </div>
+            <!-- /.panel-body -->
+
+
         </div>
     </div>
+
 </body>
 
 </html>

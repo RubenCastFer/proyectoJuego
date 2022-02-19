@@ -96,7 +96,7 @@
         <div class="row">
             <ul class="" style="list-style-type: none">
                 <li>
-                    <h5 id="puntuacion">Puntuacion</h5>
+                    <h5 name="puntuacion" id="puntuacion">Puntuacion</h5>
                 </li>
                 <li>
                     <h5 id="intentos">Intentos</h5>

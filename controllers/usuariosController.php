@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if (!empty($_SESSION["tipo"])) {
-        header("Location: index.php?controller=juego&action=menu");
-    }
+session_start();
+if (!empty($_SESSION["usuario"])) {
+    header("Location: index.php?controller=juego&action=menu");
+}
 
 function signUp()
 {
@@ -17,15 +17,14 @@ function signUp()
         $comprobar = comprobarUsuario($usuario);
         if (empty($comprobar)) {
             insertaUser($usuario);
-          
-            
+
+
             $_SESSION["usuario"] = $personaIdContrasenya["usuario"];
             header("Location: index.php?controller=juego&action=menu");
-            
         } else {
             $error = "<p style='color:red'>El usuario ya existe inserte otro</p>";
         }
-    } 
+    }
 
     include "./views/signUpView.php";
 }
