@@ -87,7 +87,7 @@
   
   <main class="form-signin">
     <form action="index.php?controller=usuarios&action=signUp" method="POST">
-      <h1 class="text-decoration-underline">TITULO</h1><br>
+      <h1 class="text-decoration-underline">Memory game</h1><br>
       <h1 class="h3 mb-3 fw-normal">Inserta tu nombre para jugar!</h1>
 
       <div class="form-floating">
