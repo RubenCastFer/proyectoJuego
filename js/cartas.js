@@ -52,7 +52,7 @@ $(function () {
 
             for (let i = 0; i < json.length; i++) {
 
-                var div2 = $("<div>", { "class": " col col-lg-2 col-md-4 mb-4 mt-4 card-grid" });
+                var div2 = $("<div>", { "class": " col col-lg-2 col-md-4  m-5 card-grid" });
                 div1.append(div2);
 
                 var divImg1 = $("<div>", { "class": "frente tam oculto" })
@@ -106,12 +106,12 @@ $(function () {
                                         swal("A la siguiente ronda", "mastodonte", "success");
                                         sessionStorage.setItem("vida", vida);
                                         sessionStorage.setItem("nivel", ++nivel);
-                                        if(nivel>1){
-                                            intentos=12;
-                                        } else{
-                                            intentos=8;
+                                        if (nivel > 1) {
+                                            intentos = 12;
+                                        } else {
+                                            intentos = 8;
                                         }
-                                        
+
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
                                     }
@@ -146,7 +146,7 @@ $(function () {
                                         if (intentos <= limite) {
 
                                             swal("eres un pringao", "ni esta aciertas", "error");
-                                            
+
 
                                             sessionStorage.setItem("vida", --vida);
                                             sessionStorage.setItem("nivel", "1");
@@ -155,11 +155,11 @@ $(function () {
 
                                         if (vida == 0) {
                                             // no funciona arreglar q guarde puntuacion en tabla
-                                            
+
                                             $.post("./controllers/juegosController.php", {
-                                                puntuacion:puntuacion
-                                            },   function () {
-                                              
+                                                puntuacion: puntuacion
+                                            }, function () {
+
                                                 // La decodificamos
                                                 setTimeout(function () { window.location.href = "index.php?controller=usuarios=&action=listarPuntuacion"; }, 2000);
                                             })
