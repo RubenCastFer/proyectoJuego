@@ -56,6 +56,28 @@ function getPuntuacionUser($usuario)
 }
 //SELECT * FROM puntuacion WHERE puntuacion.usuario = 'ruben' ORDER BY puntuacion.puntuacion DESC
 
+function updatePuntuacionUser($usuario, $puntuacion)
+{
+    try {
+
+        $db = crearConexion();
+
+        $sql = $db->prepare("UPDATE puntuacion 
+                                SET puntuacion=? 
+                                WHERE usuario = ? 
+                                ");
+
+        $sql->bindParam(1, $puntuacion);
+        $sql->bindParam(2, $usuario);
+        $sql->execute();
+        
+        return $sql;
+    } catch (PDOException $e) {
+        return null;
+    }
+    $db = null;
+}
+
 $nivel=$_POST["nivel"];
 // $nivel = 1;
 //rellenar array con fotos
