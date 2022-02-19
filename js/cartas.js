@@ -102,7 +102,7 @@ $(function () {
 
                                     if (puntuacion == cantidad) {
                                         //no esta saltando
-                                        alert("has pasado de nivel", "máquina", "mastodonte");
+                                        alert("has pasado de nivel, mastodonte");
                                         swal("has pasado de nivel", "máquina", "mastodonte");
                                         sessionStorage.setItem("vida", vida);
                                         sessionStorage.setItem("nivel", ++nivel);
@@ -140,6 +140,8 @@ $(function () {
                                         if (intentos <= limite) {
 
                                             swal("eres un pringao", "ni esta aciertas", "vaya malito");
+                                            
+
                                             sessionStorage.setItem("vida", --vida);
                                             sessionStorage.setItem("nivel", "1");
                                             setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
