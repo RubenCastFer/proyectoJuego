@@ -145,13 +145,8 @@ $(function () {
 
                                         if (intentos <= limite) {
 
-<<<<<<< HEAD
                                             swal("eres un pringao", "ni esta aciertas", "error");
                                             
-=======
-                                            swal("eres un pringao", "ni esta aciertas", "vaya malito");
-
->>>>>>> 4e9132d5c6c10a3d06c36ead9a4cfda3ae8ff3db
 
                                             sessionStorage.setItem("vida", --vida);
                                             sessionStorage.setItem("nivel", "1");
@@ -160,16 +155,13 @@ $(function () {
 
                                         if (vida == 0) {
                                             // no funciona arreglar q guarde puntuacion en tabla
-                                            var parametros2 = {
-                                                puntuacion: puntuacion
-                                            };
-                                            $.post({
-                                                data: parametros2,
-                                                url: './controllers/juegoController.php',
-                                                type: 'post',
-                                                success: function (data) {
-                                                    window.location.href = "index.php?controller=juego&action=listarPuntuaciones";
-                                                }
+                                            
+                                            $.post("./controllers/juegosController.php", {
+                                                puntuacion:puntuacion
+                                            },   function () {
+                                              
+                                                // La decodificamos
+                                                setTimeout(function () { window.location.href = "index.php?controller=&action=listarPuntuacion"; }, 2000);
                                             })
 
 
