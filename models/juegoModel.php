@@ -133,23 +133,23 @@ $nivel1 = [
 //añadir un par mas de fotos
 $nivel2 = [
     [
-        "name" => "alhambra",
+        "name" => "La Alhambra, Granada",
         "img" => "./img/alhambra.jpg",
         "id" => 1,
     ],
     [
-        "name" => "cadiz",
+        "name" => "Catedral de Cádiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
     ],
     [
-        "name" => "alhambra",
+        "name" => "La Alhambra, Granada",
         "img" => "./img/alhambra.jpg",
         "id" => 1
     ],
 
     [
-        "name" => "mezquita",
+        "name" => "La Mezquita, Córdoba",
         "img" => "./img/mezquita.jpg",
         "id" => 4
     ],
