@@ -22,13 +22,13 @@ $(function () {
 
 
     var mostrarVida = document.getElementById("vidas");
-    mostrarVida.innerHTML = "Vida " + vida;
+    mostrarVida.innerHTML = "Vidas " + vida;
 
     var mostrarIntentos = document.getElementById("intentos");
     mostrarIntentos.innerHTML = "Intentos " + intentos;
 
     var liPunt = document.getElementById("puntuacion");
-    liPunt.innerHTML = "puntuacion " + puntuacion;
+    liPunt.innerHTML = "Puntuación " + puntuacion;
 
     var parametros = {
         nivel: nivel,
@@ -52,7 +52,7 @@ $(function () {
 
             for (let i = 0; i < json.length; i++) {
 
-                var div2 = $("<div>", { "class": " col-2 mb-4 mt-4 card-grid" });
+                var div2 = $("<div>", { "class": " col col-lg-2 col-md-4 mb-4 mt-4 card-grid" });
                 div1.append(div2);
 
                 var divImg1 = $("<div>", { "class": "frente tam oculto" })
@@ -98,7 +98,7 @@ $(function () {
 
                                     liPunt = document.getElementById("puntuacion");
                                     puntuacion += 100;
-                                    liPunt.innerHTML = "puntuacion " + puntuacion;
+                                    liPunt.innerHTML = "Puntuación " + puntuacion;
 
                                     if (puntuacion == cantidad) {
                                         //no esta saltando

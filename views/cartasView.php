@@ -19,6 +19,8 @@
             font-size: 65px;
         }
 
+      
+
         .col-12 {
             text-align: center;
 
@@ -26,8 +28,8 @@
 
         /* pregurntar a carlos el tamaño del div de las img */
         .tam {
-            height: 100px;
-            width: 150px;
+            height: 150px;
+            width: 300px;
         }
 
         .oculto {
@@ -46,6 +48,19 @@
 
         footer {
             text-align: center;
+            background-color: #52BE80;
+            
+        }
+
+        h4 {
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: #52BE80;
         }
 
         @keyframes rotate {
@@ -63,6 +78,8 @@
             font-size: 50px;
             display: none;
         }
+
+        
     </style>
     <script>
         $(document).ready(function() {
@@ -79,34 +96,34 @@
         });
     </script>
 
+
 </head>
 
 <body>
-    <header class="container-fluid bg-success">
+    <header class="container-fluid ">
         <div class="col-12 ">
             <h1>Encuentra las parejas</h1>
             <div id="flip">Jornadas Culturales Día de Andalucía</div>
         </div>
 
     </header>
-    <div class="container" id="mostrar">
+    <div class="container-fluid mr-5 mr-lg-4" id="mostrar">
 
     </div>
-    <footer class="container-fluid bg-success">
-        <div class="row">
-            <ul class="" style="list-style-type: none">
-                <li>
-                    <h5 name="puntuacion" id="puntuacion">Puntuacion</h5>
-                </li>
-                <li>
-                    <h5 id="intentos">Intentos</h5>
-                </li>
-                <li>
-                    <h5 id="vidas">Vidas</h5>
-                </li>
-            </ul>
+    <p id="nivel" style="visibility: hidden;">1</p>
+    <footer class="container-fluid ">
+        <div class="row ">
+            <div class="col pie">
+                <h4 name="puntuacion" id="puntuacion">Puntuación</h4>
+            </div>
+            <div class="col pie">
+                <h4 id="intentos">Intentos</h4>
+            </div>
+            <div class="col pie">
+                <h4 id="vidas">Vidas</h4>
+            </div>
         </div>
-        <p id="nivel" style="visibility: hidden;">1</p>
+        
     </footer>
 </body>
 
