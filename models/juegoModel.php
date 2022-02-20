@@ -4,8 +4,8 @@ function crearConexion()
 {
     $servidor = "localhost";
     $baseDatos = "juego";
-    $usuario = "root";
-    $pass = "root";
+    $usuario = "developer";
+    $pass = "developer";
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
@@ -71,14 +71,14 @@ function updatePuntuacionUser($usuario, $puntuacion)
         $sql->bindParam(2, $usuario);
         $sql->execute();
         
-        return $sql;
+        
     } catch (PDOException $e) {
         return null;
     }
     $db = null;
 }
 
-$nivel=$_POST["nivel"];
+
 
  //$nivel = 2;
 //rellenar array con fotos

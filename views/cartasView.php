@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
     <script src="./js/sweetalert.min.js"></script>
     <script src="./js/cartas.js" type="text/javascript"></script>
-    <title>Document</title>
+    <title>Panel</title>
     <style>
         h1 {
             font-size: 65px;
