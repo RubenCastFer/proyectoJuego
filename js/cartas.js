@@ -162,7 +162,7 @@ $(function () {
                                             if (vida == 0) {
                                                 // no funciona arreglar q guarde puntuacion en tabla
     
-                                                document.cookie = "puntuacion" + "=" + puntuacion;
+                                                document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
                                                 setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
     
     
