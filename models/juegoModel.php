@@ -78,11 +78,6 @@ function updatePuntuacionUser($usuario, $puntuacion)
     $db = null;
 }
 
-<<<<<<< HEAD
-//$nivel=$_POST["nivel"];
-=======
-
->>>>>>> 401b3a4d4b5af6880081c023a4b1c4ba2aa6d136
 
  $nivel = 2;
 //rellenar array con fotos
@@ -182,73 +177,73 @@ $nivel2 = [
     ],
 
     [
-        "name" => "plaza españa",
+        "name" => "Plaza de España, Sevilla",
         "img" => "./img/plaza_españa.jpg",
         "id" => 5
     ],
 
     [
-        "name" => "giralda",
+        "name" => "La Giralda, Sevilla",
         "img" => "./img/giralda.jpg",
         "id" => 3
     ],
 
     [
-        "name" => "catedral jerez",
+        "name" => "Catedral de Jerez",
         "img" => "./img/catedral_jerez.jpg",
         "id" => 7
     ],
 
     [
-        "name" => "alcazaba malaga",
+        "name" => "La Alcazaba de Málaga",
         "img" => "./img/alcazaba_malaga.jpg",
         "id" => 6
     ],
 
     [
-        "name" => "mezquita",
+        "name" => "La Mezquita de Córdoba",
         "img" => "./img/mezquita.jpg",
         "id" => 4
     ],
 
     [
-        "name" => "cadiz",
+        "name" => "Catedral de Cádiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
     ],
 
     [
-        "name" => "plaza españa",
+        "name" => "Plaza de España, Sevilla",
         "img" => "./img/plaza_españa.jpg",
         "id" => 5
     ],
 
     [
-        "name" => "castillo jaen",
+        "name" => "Castillo de Jaén",
         "img" => "./img/castillo_jaen.jpg",
         "id" => 8
     ],
 
     [
-        "name" => "catedral jerez",
+        "name" => "Catedral de Jerez",
         "img" => "./img/catedral_jerez.jpg",
         "id" => 7
     ],
 
     [
-        "name" => "alcazaba malaga",
+        "name" => "La Alcazaba de Málaga",
         "img" => "./img/alcazaba_malaga.jpg",
         "id" => 6
     ],
 
     [
-        "name" => "giralda",
+        "name" => "La Giralda, Sevilla",
         "img" => "./img/giralda.jpg",
         "id" => 3
     ],
 
     [
-        "name" => "castillo jaen",
+        "name" => "El Castillo de Jaén",
         "img" => "./img/castillo_jaen.jpg",
         "id" => 8
     ]
@@ -257,143 +252,143 @@ $nivel2 = [
 //alcazar carmona quitar 2
 $nivel3 = [
     [
-        "name" => "alhambra",
+        "name" => "La Alhambra, Granada",
         "img" => "./img/alhambra.jpg",
         "id" => 1,
     ],
     [
-        "name" => "cadiz",
+        "name" => "Catedral de Cádiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
     ],
     [
-        "name" => "alhambra",
+        "name" => "La Alhambra, Granada",
         "img" => "./img/alhambra.jpg",
         "id" => 1
     ],
 
     [
-        "name" => "mezquita",
+        "name" => "La Mezquita, Córdoba",
         "img" => "./img/mezquita.jpg",
         "id" => 4
     ],
 
     [
-        "name" => "plaza españa",
+        "name" => "Plaza de España, Sevilla",
         "img" => "./img/plaza_españa.jpg",
         "id" => 5
     ],
 
     [
-        "name" => "alcazar carmona",
-        "img" => "./img/alcazar_carmona.jpg",
+        "name" => "Torre del Oro, Sevilla",
+        "img" => "./img/torredeloro.jpg",
         "id" => 11
     ],
 
     [
-        "name" => "alcazar carmona",
+        "name" => "Alcázar, Carmona (Sevilla)",
         "img" => "./img/alcazar_carmona.jpg",
         "id" => 10
     ],
 
     [
-        "name" => "giralda",
+        "name" => "La Giralda, Sevilla",
         "img" => "./img/giralda.jpg",
         "id" => 3
     ],
 
     [
-        "name" => "catedral jerez",
+        "name" => "Catedral de Jerez",
         "img" => "./img/catedral_jerez.jpg",
         "id" => 7
     ],
 
     [
-        "name" => "alcazaba malaga",
+        "name" => "La Alcazaba de Málaga",
         "img" => "./img/alcazaba_malaga.jpg",
         "id" => 6
     ],
 
     [
-        "name" => "alcazar carmona",
+        "name" => "Alcázar, Carmona (Sevilla)",
         "img" => "./img/alcazar_carmona.jpg",
         "id" => 10
     ],
 
     [
-        "name" => "mezquita",
+        "name" => "La Mezquita, Córdoba",
         "img" => "./img/mezquita.jpg",
         "id" => 4
     ],
 
     [
-        "name" => "catedral ubeda",
+        "name" => "Catedral, Úbeda (Jaén)",
         "img" => "./img/catedral_ubeda.jpg",
         "id" => 9
     ],
 
     [
-        "name" => "castillo aracena",
+        "name" => "Castillo, Aracena (Huelva)",
         "img" => "./img/castillo_aracena.jpg",
         "id" => 12
     ],
 
     [
-        "name" => "cadiz",
+        "name" => "Catedral de Cádiz",
         "img" => "./img/cadiz.jpg",
         "id" => 2
     ],
 
     [
-        "name" => "alcazar carmona",
-        "img" => "./img/alcazar_carmona.jpg",
+        "name" => "Torre del Oro, Sevilla",
+        "img" => "./img/torredeloro.jpg",
         "id" => 11
     ],
 
     [
-        "name" => "plaza españa",
+        "name" => "Plaza de España, Sevilla",
         "img" => "./img/plaza_españa.jpg",
         "id" => 5
     ],
 
     [
-        "name" => "castillo jaen",
+        "name" => "Castillo de Jaén",
         "img" => "./img/castillo_jaen.jpg",
         "id" => 8
     ],
 
     [
-        "name" => "castillo aracena",
+        "name" => "Castillo , Aracena (Huelva)",
         "img" => "./img/castillo_aracena.jpg",
         "id" => 12
     ],
 
     [
-        "name" => "catedral jerez",
+        "name" => "Catedral de Jerez",
         "img" => "./img/catedral_jerez.jpg",
         "id" => 7
     ],
 
     [
-        "name" => "alcazaba malaga",
+        "name" => "La Alcazaba de Málaga",
         "img" => "./img/alcazaba_malaga.jpg",
         "id" => 6
     ],
 
     [
-        "name" => "giralda",
+        "name" => "La Giralda, Sevilla",
         "img" => "./img/giralda.jpg",
         "id" => 3
     ],
 
     [
-        "name" => "castillo jaen",
+        "name" => "Castillo, Jaén",
         "img" => "./img/castillo_jaen.jpg",
         "id" => 8
     ],
 
     [
-        "name" => "catedral ubeda",
+        "name" => "Catedral, Úbeda",
         "img" => "./img/catedral_ubeda.jpg",
         "id" => 9
     ]
