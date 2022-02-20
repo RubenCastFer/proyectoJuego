@@ -155,15 +155,8 @@ $(function () {
 
                                         if (vida == 0) {
                                             // no funciona arreglar q guarde puntuacion en tabla
-<<<<<<< HEAD
 
-                                            $.post("./controllers/juegosController.php", {
-                                                puntuacion: puntuacion
-                                            }, function () {
-
-                                                // La decodificamos
-                                                setTimeout(function () { window.location.href = "index.php?controller=usuarios=&action=listarPuntuacion"; }, 2000);
-=======
+                                           
                                             var parametros2 = {
                                                 puntuacion: puntuacion
                                             };
@@ -174,7 +167,6 @@ $(function () {
                                                 success: function (data) {
                                                     window.location.href = "index.php?controller=juego&action=listarPuntuaciones";
                                                 }
->>>>>>> 0505fe3495d7a4d652eaabc0fe02c6ebd122782b
                                             })
 
 
