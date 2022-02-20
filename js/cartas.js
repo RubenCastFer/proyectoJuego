@@ -47,19 +47,19 @@ $(function () {
 
             var cuerpo = $("#mostrar");
 
-            var div1 = $("<div>", { "class": "row" });
+            var div1 = $("<div>", { "class": "row centrar" });
             cuerpo.append(div1);
 
             for (let i = 0; i < json.length; i++) {
 
-                var div2 = $("<div>", { "class": " col col-lg-2 col-md-4  m-3 card-grid" });
+                var div2 = $("<div>", { "class": " col  m-2 card-grid" });
                 div1.append(div2);
 
-                var divImg1 = $("<div>", { "class": "frente tam oculto" })
+                var divImg1 = $("<div>", { "class": "frente tam oculto " })
                 var img1 = $("<img>", { "src": json[i].img, "class": "w-100 h-100 " + json[i].id, "alt": json[i].name })
                 divImg1.append(img1);
 
-                var divImg2 = $("<div>", { "class": "atras tam visible" })
+                var divImg2 = $("<div>", { "class": "atras tam visible " })
                 var img2 = $("<img>", { "src": "./img/andalucia.png", "class": "w-100 h-100" })
                 divImg2.append(img2);
 
