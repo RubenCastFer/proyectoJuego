@@ -4,8 +4,8 @@ function crearConexion()
 {
     $servidor = "localhost";
     $baseDatos = "juego";
-    $usuario = "root";
-    $pass = "root";
+    $usuario = "developer";
+    $pass = "developer";
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
@@ -70,7 +70,7 @@ function updatePuntuacionUser($usuario, $puntuacion)
         $sql->bindParam(1, $puntuacion);
         $sql->bindParam(2, $usuario);
         $sql->execute();
-        
+
         return $sql;
     } catch (PDOException $e) {
         return null;
@@ -78,13 +78,7 @@ function updatePuntuacionUser($usuario, $puntuacion)
     $db = null;
 }
 
-<<<<<<< HEAD
-//$nivel=$_POST["nivel"];
-=======
 
->>>>>>> 401b3a4d4b5af6880081c023a4b1c4ba2aa6d136
-
- $nivel = 2;
 //rellenar array con fotos
 $nivel1 = [
     [
@@ -148,7 +142,7 @@ $nivel1 = [
         "name" => "Puente y Tajo de Ronda (Málaga)",
         "img" => "./img/ronda.jpg",
         "id" => 6
-    ],  
+    ],
 
     [
         "name" => "La Giralda, Sevilla",
@@ -399,8 +393,8 @@ $nivel3 = [
     ]
 ];
 
-if(isset($_POST["nivel"])){
-    $nivel=$_POST["nivel"];
+if (isset($_POST["nivel"])) {
+    $nivel = $_POST["nivel"];
 
     switch ($nivel) {
         case '1':
@@ -416,5 +410,4 @@ if(isset($_POST["nivel"])){
             echo json_encode($nivel1);
             break;
     }
-
 }
