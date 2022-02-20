@@ -5,9 +5,10 @@ var foto2;
 
 var vida = sessionStorage.getItem("vida");
 var nivel = sessionStorage.getItem("nivel");
-
-var puntuacion = 0;
-var intentos = 8;
+// var vida =1;
+// var nivel =1;
+var puntuacion = 100;
+var intentos = 1;
 const limite = 0
 
 
@@ -156,18 +157,8 @@ $(function () {
                                         if (vida == 0) {
                                             // no funciona arreglar q guarde puntuacion en tabla
 
-                                           
-                                            var parametros2 = {
-                                                puntuacion: puntuacion
-                                            };
-                                            $.post({
-                                                data: parametros2,
-                                                url: './controllers/juegoController.php',
-                                                type: 'post',
-                                                success: function (data) {
-                                                    window.location.href = "index.php?controller=juego&action=listarPuntuaciones";
-                                                }
-                                            })
+                                            document.cookie = "puntuacion"+"="+puntuacion;
+                                            setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
 
 
                                         }
