@@ -9,6 +9,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src=".\js\puntuaciones.js"></script>
      
 </head>
 
@@ -20,7 +21,7 @@
 
 
     <div class="text-light titulo">
-        <h1>Mi puntuacion mas alta</h1>
+        <h1>Mi puntuacion</h1>
     </div>
 
     <div class="row col-6  mt-5 mb-5 offset-md-3">
@@ -52,11 +53,11 @@
     <!-- mostrar puntuaciones totales -->
 
     <div class="text-light">
-        <h1>Puntuaciones todos los usuarios</h1>
+        <h1 id = "click">Puntuaciones todos los usuarios</h1>
     </div>
 
 
-    <div class="row col-6  mt-5 mb-5 offset-md-3">
+    <div class="row col-6  mt-5 mb-5 offset-md-3" id = tablaUsuarios>
         <table class="table table-dark table-striped" border="1">
             <tr>
                 <th>Usuario</th>
