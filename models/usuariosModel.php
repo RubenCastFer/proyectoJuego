@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 function crearConexion()
 {
@@ -6,6 +7,14 @@ function crearConexion()
     $baseDatos = "juego";
     $usuario = "developer";
     $pass = "developer";
+=======
+function crearConexion(){
+    $servidor="localhost";
+    $baseDatos="juego"; 
+    
+    $usuario= "developer";
+    $pass="developer";
+>>>>>>> a6c0c24ef5eacf0ba16e965176617f845aaab819
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
