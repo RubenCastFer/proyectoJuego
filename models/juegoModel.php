@@ -78,7 +78,7 @@ function updatePuntuacionUser($usuario, $puntuacion)
     $db = null;
 }
 
-$nivel=$_POST["nivel"];
+
 
  //$nivel = 2;
 //rellenar array con fotos
@@ -395,17 +395,22 @@ $nivel3 = [
     ]
 ];
 
-switch ($nivel) {
-    case '1':
-        echo json_encode($nivel1);
-        break;
-    case '2':
-        echo json_encode($nivel2);
-        break;
-    case '3':
-        echo json_encode($nivel3);
-        break;
-    default:
-        echo json_encode($nivel1);
-        break;
+if(isset($_POST["nivel"])){
+    $nivel=$_POST["nivel"];
+
+    switch ($nivel) {
+        case '1':
+            echo json_encode($nivel1);
+            break;
+        case '2':
+            echo json_encode($nivel2);
+            break;
+        case '3':
+            echo json_encode($nivel3);
+            break;
+        default:
+            echo json_encode($nivel1);
+            break;
+    }
+
 }
