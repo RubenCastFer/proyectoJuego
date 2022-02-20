@@ -7,8 +7,8 @@ var vida = sessionStorage.getItem("vida");
 var nivel = sessionStorage.getItem("nivel");
 // var vida =1;
 // var nivel =1;
-var puntuacion = 100;
-var intentos = 1;
+var puntuacion = 0;
+var intentos = 8;
 const limite = 0
 
 
