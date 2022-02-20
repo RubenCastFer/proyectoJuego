@@ -140,6 +140,7 @@
                 <script>
                     sessionStorage.setItem("vida", "3");
                     sessionStorage.setItem("nivel", "1");
+                    sessionStorage.setItem("puntuacionFinal", "0");
                 </script>
 
 

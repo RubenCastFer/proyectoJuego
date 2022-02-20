@@ -132,12 +132,12 @@
         </div>
 
     </header>
-    <div class="container-fluid mr-5 mr-lg-4 " id="mostrar">
+    <div class="container-fluid mr-5 mr-lg-4 " id="mostrar" height="100%">
 
     </div>
     <p id="nivel" style="visibility: hidden;">1</p>
-    <footer class="container-fluid ">
-        <div class="row ">
+    <footer class="container-fluid fixed-bottom">
+        <div class="row">
             <div class="col pie">
                 <h4 name="puntuacion" id="puntuacion">Puntuación</h4>
             </div>

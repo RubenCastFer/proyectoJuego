@@ -31,11 +31,9 @@ function insertaUser($usuario)
 {
     try {
         $conexion = crearConexion();
-        $sqlInsert = $conexion->prepare("INSERT INTO puntuacion (usuario)  VALUES (?)");
-        $sqlInsert->bindParam(1, $usuario);
-
-        $sqlInsert->execute();
-
+        $sqlInsert = $conexion->prepare("INSERT INTO `puntuacion`(`usuario`, `puntuacion`) VALUES (:usuario,0)");
+        $parametros = array(":usuario" => $usuario);
+        $sqlInsert->execute($parametros);
 
         $conexion = null;
         return $sqlInsert;

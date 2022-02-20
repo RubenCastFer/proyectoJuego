@@ -5,6 +5,8 @@ var foto2;
 
 var vida = sessionStorage.getItem("vida");
 var nivel = sessionStorage.getItem("nivel");
+var puntuacionFinal = sessionStorage.getItem("puntuacionFinal");
+
 // var vida =1;
 // var nivel =1;
 var puntuacion = 0;
@@ -107,6 +109,10 @@ $(function () {
                                         swal("A la siguiente ronda", "mastodonte", "success");
                                         sessionStorage.setItem("vida", vida);
                                         sessionStorage.setItem("nivel", ++nivel);
+                                        puntuacionFinal = puntuacionFinal + puntuacion;
+                                        sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
+
+
                                         if (nivel > 1) {
                                             intentos = 12;
                                         } else {
@@ -151,17 +157,21 @@ $(function () {
 
                                             sessionStorage.setItem("vida", --vida);
                                             sessionStorage.setItem("nivel", "1");
-                                            setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+                                            puntuacionFinal = puntuacionFinal + puntuacion;
+                                            sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
+                                            if (vida == 0) {
+                                                // no funciona arreglar q guarde puntuacion en tabla
+    
+                                                document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
+                                                setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
+    
+    
+                                            } else{
+                                                setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+                                            }
                                         }
 
-                                        if (vida == 0) {
-                                            // no funciona arreglar q guarde puntuacion en tabla
-
-                                            document.cookie = "puntuacion"+"="+puntuacion;
-                                            setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
-
-
-                                        }
+                                        
                                         //quitar intento y si los intentos llegan a 0 restar una vida
                                     }, 1000);
                                 }
