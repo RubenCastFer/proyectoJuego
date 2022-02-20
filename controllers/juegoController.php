@@ -14,9 +14,9 @@ function listarPuntuaciones()
     require "./models/juegoModel.php";
     $usuario = $_SESSION['usuario'];
     
-    if(isset($_COOKIE["puntuacion"])) {
+    if(isset($_COOKIE["puntuacionFinal"])) {
         
-        $puntuacion=$_COOKIE["puntuacion"];
+        $puntuacion=$_COOKIE["puntuacionFinal"];
         updatePuntuacionUser($usuario, $puntuacion);
         
     }

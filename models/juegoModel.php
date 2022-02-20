@@ -79,8 +79,6 @@ function updatePuntuacionUser($usuario, $puntuacion)
 }
 
 
- //$nivel = 2;
-//rellenar array con fotos
 $nivel1 = [
     [
         "name" => "La Alhambra, Granada",
