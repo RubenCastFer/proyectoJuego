@@ -19,7 +19,18 @@
             font-size: 65px;
         }
 
-      
+        .centrar {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .frente {
+            width: 300px;
+        }
+
+        .atras {
+            width: 300px;
+        }
 
         .col-12 {
             text-align: center;
@@ -31,6 +42,22 @@
             height: 150px;
             width: 300px;
         }
+
+        @media (max-width: 1619px) {
+            .tam {
+                height: 100px;
+                width: 200px;
+            }
+
+            .frente {
+                width: 200px;
+            }
+
+            .atras {
+                width: 200px;
+            }
+        }
+
 
         .oculto {
             display: none;
@@ -49,7 +76,7 @@
         footer {
             text-align: center;
             background-color: #52BE80;
-            
+
         }
 
         h4 {
@@ -78,8 +105,6 @@
             font-size: 50px;
             display: none;
         }
-
-        
     </style>
     <script>
         $(document).ready(function() {
@@ -107,7 +132,7 @@
         </div>
 
     </header>
-    <div class="container-fluid mr-5 mr-lg-4" id="mostrar">
+    <div class="container-fluid mr-5 mr-lg-4 " id="mostrar">
 
     </div>
     <p id="nivel" style="visibility: hidden;">1</p>
@@ -123,7 +148,7 @@
                 <h4 id="vidas">Vidas</h4>
             </div>
         </div>
-        
+
     </footer>
 </body>
 
