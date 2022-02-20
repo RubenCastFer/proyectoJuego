@@ -1,20 +1,11 @@
 <?php
-<<<<<<< HEAD
-
 function crearConexion()
 {
     $servidor = "localhost";
     $baseDatos = "juego";
-    $usuario = "developer";
-    $pass = "developer";
-=======
-function crearConexion(){
-    $servidor="localhost";
-    $baseDatos="juego"; 
-    
-    $usuario= "developer";
-    $pass="developer";
->>>>>>> a6c0c24ef5eacf0ba16e965176617f845aaab819
+    $usuario = "root";
+    $pass = "root";
+
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
@@ -42,11 +33,9 @@ function insertaUser($usuario)
 {
     try {
         $conexion = crearConexion();
-        $sqlInsert = $conexion->prepare("INSERT INTO puntuacion (usuario)  VALUES (?)");
-        $sqlInsert->bindParam(1, $usuario);
-
-        $sqlInsert->execute();
-
+        $sqlInsert = $conexion->prepare("INSERT INTO `puntuacion`(`usuario`, `puntuacion`) VALUES (:usuario,0)");
+        $parametros = array(":usuario" => $usuario);
+        $sqlInsert->execute($parametros);
 
         $conexion = null;
         return $sqlInsert;

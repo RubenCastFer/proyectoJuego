@@ -15,8 +15,7 @@ function listarPuntuaciones()
     $usuario = $_SESSION['usuario'];
     
     if(isset($_COOKIE["puntuacion"])) {
-        var_dump($_COOKIE["puntuacion"]);
-        var_dump($_SESSION['usuario']);
+        
         $puntuacion=$_COOKIE["puntuacion"];
         updatePuntuacionUser($usuario, $puntuacion);
         
