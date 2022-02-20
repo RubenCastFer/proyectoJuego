@@ -19,7 +19,7 @@ function signUp()
             insertaUser($usuario);
 
 
-            $_SESSION["usuario"] = $personaIdContrasenya["usuario"];
+            $_SESSION["usuario"] = $usuario;
             header("Location: index.php?controller=juego&action=menu");
         } else {
             $error = "<p style='color:red'>El usuario ya existe inserte otro</p>";

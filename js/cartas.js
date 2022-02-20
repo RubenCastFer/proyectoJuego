@@ -52,7 +52,7 @@ $(function () {
 
             for (let i = 0; i < json.length; i++) {
 
-                var div2 = $("<div>", { "class": " col col-lg-2 col-md-4  m-5 card-grid" });
+                var div2 = $("<div>", { "class": " col col-lg-2 col-md-4  m-3 card-grid" });
                 div1.append(div2);
 
                 var divImg1 = $("<div>", { "class": "frente tam oculto" })

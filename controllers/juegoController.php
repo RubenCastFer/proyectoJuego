@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (empty($_SESSION["usuario"])) {
+    header("Location: index.php?controller=usuarios&action=signUp");
+}
 
 function menu()
 {
