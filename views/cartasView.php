@@ -20,8 +20,10 @@
         }
 
         .centrar {
+            display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 600px;
         }
 
         .frente {
@@ -132,7 +134,7 @@
         </div>
 
     </header>
-    <div class="container-fluid mr-5 mr-lg-4 " id="mostrar" height="100%">
+    <div class="container-fluid mr-5 mr-lg-4 col-md-10" id="mostrar" height="100%">
 
     </div>
     <p id="nivel" style="visibility: hidden;">1</p>
