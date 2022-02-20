@@ -4,8 +4,8 @@ function crearConexion()
 {
     $servidor = "localhost";
     $baseDatos = "juego";
-    $usuario = "developer";
-    $pass = "developer";
+    $usuario = "root";
+    $pass = "root";
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
@@ -78,7 +78,11 @@ function updatePuntuacionUser($usuario, $puntuacion)
     $db = null;
 }
 
+<<<<<<< HEAD
 //$nivel=$_POST["nivel"];
+=======
+
+>>>>>>> 401b3a4d4b5af6880081c023a4b1c4ba2aa6d136
 
  $nivel = 2;
 //rellenar array con fotos
@@ -395,17 +399,22 @@ $nivel3 = [
     ]
 ];
 
-switch ($nivel) {
-    case '1':
-        echo json_encode($nivel1);
-        break;
-    case '2':
-        echo json_encode($nivel2);
-        break;
-    case '3':
-        echo json_encode($nivel3);
-        break;
-    default:
-        echo json_encode($nivel1);
-        break;
+if(isset($_POST["nivel"])){
+    $nivel=$_POST["nivel"];
+
+    switch ($nivel) {
+        case '1':
+            echo json_encode($nivel1);
+            break;
+        case '2':
+            echo json_encode($nivel2);
+            break;
+        case '3':
+            echo json_encode($nivel3);
+            break;
+        default:
+            echo json_encode($nivel1);
+            break;
+    }
+
 }
