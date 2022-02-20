@@ -35,9 +35,9 @@ function insertaUser($usuario){
         
         $sqlInsert->execute();
         
-        $last_id = $conexion->lastInsertId();
+        
         $conexion = null;
-        return $last_id;
+        return $sqlInsert;
     } catch (Throwable $e) {
         
     }
