@@ -10,76 +10,78 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src=".\js\puntuaciones.js"></script>
-     
+
 </head>
 
-<body class="text-center container">
-
-<i class="bi bi-box-arrow-left"></i>
+<body class = "container">
+    <a class="btn btn-secondary sticky-top" href="index.php?controller=juego&action=menu" role="button"><span style='font-size:30;'>&#128281;</span></a>
 
     <!-- mostrar puntuacion usuario maxima -->
 
+    <div class="text-center">
+        <div class="text-light titulo">
+            <h1>Mi puntuacion</h1>
+        </div>
 
-    <div class="text-light titulo">
-        <h1>Mi puntuacion</h1>
-    </div>
-
-    <div class="row col-6  mt-5 mb-5 offset-md-3">
-        <table class="table table-dark table-striped" border="1">
-            <tr>
-                <th>Usuario</th>
-                <th>Puntuacion</th>
-            </tr>
-
-
-            <?php
-
-            $contador = 0;
-            foreach ($unaPuntuacion as $puntuacion) :
-                if ($contador == 0) : ?>
-                    <tr>
-                        <td><?php echo $puntuacion['usuario'] ?></td>
-                        <td><?php echo $puntuacion['puntuacion'] ?></td>
-                    </tr>
-            <?php
-                endif;
-                $contador++;
-            endforeach; ?>
-
-        </table>
-    </div>
-    <br><br><br><br><br><br><br><br>
-    
-    <!-- mostrar puntuaciones totales -->
-
-    <div class="text-light">
-        <h1 id = "click">Puntuaciones todos los usuarios</h1>
-    </div>
+        <div class="row col-6 col-sm-6 mt-5 mb-5 offset-md-3">
+            <table class="table table-dark table-striped" border="1">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Puntuacion</th>
+                </tr>
 
 
-    <div class="row col-6  mt-5 mb-5 offset-md-3" id = tablaUsuarios>
-        <table class="table table-dark table-striped" border="1">
-            <tr>
-                <th>Usuario</th>
-                <th>Puntuacion</th>
-            </tr>
+                <?php
+
+                $contador = 0;
+                foreach ($unaPuntuacion as $puntuacion) :
+                    if ($contador == 0) : ?>
+                        <tr>
+                            <td><?php echo $puntuacion['usuario'] ?></td>
+                            <td><?php echo $puntuacion['puntuacion'] ?></td>
+                        </tr>
+                <?php
+                    endif;
+                    $contador++;
+                endforeach; ?>
+
+            </table>
+        </div>
+        <br><br><br><br><br><br><br><br>
+
+        <!-- mostrar puntuaciones totales -->
 
 
-            <?php
+        <div class="text-light">
+       <h1>Puntuaciones de los usuarios</h1>
+        </div>
 
-            $contador = 0;
-            foreach ($puntuaciones as $puntuacion) :
-                if ($contador < 20) : ?>
-                    <tr>
-                        <td><?php echo $puntuacion['usuario'] ?></td>
-                        <td><?php echo $puntuacion['puntuacion'] ?></td>
-                    </tr>
-            <?php
-                endif;
-                $contador++;
-            endforeach; ?>
 
-        </table>
+        <div class="row col-6 col-sm-6 mt-5 mb-5 offset-md-3" id=tablaUsuarios>
+            <table class="table table-dark table-striped" border="1">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Puntuacion</th>
+                </tr>
+
+
+                <?php
+
+                $contador = 0;
+                foreach ($puntuaciones as $puntuacion) :
+                    if ($contador < 20) : ?>
+                        <tr>
+                            <td><?php echo $puntuacion['usuario'] ?></td>
+                            <td><?php echo $puntuacion['puntuacion'] ?></td>
+                        </tr>
+                <?php
+                    endif;
+                    $contador++;
+                endforeach; ?>
+
+            </table>
+        </div>
+
     </div>
 </body>
 
@@ -91,6 +93,4 @@
         background-image: url(images/mezquita.jpg);
         background-size: auto 100%;
     }
-
-
 </style>
