@@ -4,8 +4,8 @@ function crearConexion()
 {
     $servidor = "localhost";
     $baseDatos = "juego";
-    $usuario = "developer";
-    $pass = "developer";
+    $usuario = "root";
+    $pass = "root";
     try {
         return new PDO("mysql:host=$servidor;dbname=$baseDatos", $usuario, $pass);
     } catch (PDOException $e) {
@@ -70,7 +70,7 @@ function updatePuntuacionUser($usuario, $puntuacion)
         $sql->bindParam(1, $puntuacion);
         $sql->bindParam(2, $usuario);
         $sql->execute();
-
+        
         return $sql;
     } catch (PDOException $e) {
         return null;
@@ -78,16 +78,8 @@ function updatePuntuacionUser($usuario, $puntuacion)
     $db = null;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-//$nivel=$_POST["nivel"];
 
- $nivel = 1;
-=======
->>>>>>> 4d63826dfa9dff76bbaba6480842dbff85d89f79
-
->>>>>>> ba69bfa595b6af3c7ffad737b47fa85e64c565fa
+ $nivel = 2;
 //rellenar array con fotos
 $nivel1 = [
     [
@@ -151,7 +143,7 @@ $nivel1 = [
         "name" => "Puente y Tajo de Ronda (Málaga)",
         "img" => "./img/ronda.jpg",
         "id" => 6
-    ],
+    ],  
 
     [
         "name" => "La Giralda, Sevilla",
@@ -288,7 +280,7 @@ $nivel3 = [
     ],
 
     [
-        "name" => "Torre del Oro, Sevilla",
+        "name" => " Torre del Oro (Sevilla)",
         "img" => "./img/torredeloro.jpg",
         "id" => 11
     ],
@@ -402,23 +394,8 @@ $nivel3 = [
     ]
 ];
 
-<<<<<<< HEAD
-switch ($nivel) {
-    case '1':
-        echo json_encode($nivel1);
-        break;
-    case '2':
-        echo json_encode($nivel2);
-        break;
-    case '3':
-        echo json_encode($nivel3);
-        break;
-    default:
-        echo json_encode($nivel1);
-        break;
-=======
-if (isset($_POST["nivel"])) {
-    $nivel = $_POST["nivel"];
+if(isset($_POST["nivel"])){
+    $nivel=$_POST["nivel"];
 
     switch ($nivel) {
         case '1':
@@ -434,5 +411,5 @@ if (isset($_POST["nivel"])) {
             echo json_encode($nivel1);
             break;
     }
->>>>>>> ba69bfa595b6af3c7ffad737b47fa85e64c565fa
+
 }
