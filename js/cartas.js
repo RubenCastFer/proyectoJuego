@@ -3,17 +3,16 @@ var click = 0;
 var foto1;
 var foto2;
 
-// var vida = sessionStorage.getItem("vida");
-// var nivel = sessionStorage.getItem("nivel");
+var vida = sessionStorage.getItem("vida");
+var nivel = sessionStorage.getItem("nivel");
 
 var puntuacionFinal= parseInt(sessionStorage.getItem("puntuacionFinal"));
-var vida =1;
-var nivel =1;
-var puntuacion = 100;
+// var vida =1;
+// var nivel =1;
+var puntuacion = 0;
 
-// var intentos = sessionStorage.getItem("intentos");
-// intentos=parseInt(intentos,10);
-var intentos=1;
+var intentos = sessionStorage.getItem("intentos");
+// var intentos=1;
 const limite = 0;
 
 
