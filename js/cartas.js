@@ -162,7 +162,7 @@ $(function () {
 
                                         if (intentos <= limite) {
 
-                                            swal("eres un pringao", "ni esta aciertas", "error");
+                                            swal("que malooo!", "pa tras otra vez", "error");
 
 
                                             sessionStorage.setItem("vida", --vida);

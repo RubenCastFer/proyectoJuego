@@ -78,6 +78,7 @@
         footer {
             text-align: center;
             background-color: #52BE80;
+            padding: 20px;
 
         }
 
@@ -111,11 +112,17 @@
     <script>
         $(document).ready(function() {
             $("h1").hover(function() {
-                $("#flip").slideDown("slow");
-            }, function() {
-                $("#flip").css({
-                    "textShadow": "white 10px 10px 10px"
+                var h1 = $("h1");
+                h1.animate({
+                    left: '20px'
+                }, "slow");
+                h1.animate({
+                    fontSize: '3em'
+                }, "slow");
+                h1.animate({
+                    opacity: '0.5'
                 });
+
             });
 
 
@@ -130,7 +137,7 @@
     <header class="container-fluid ">
         <div class="col-12 ">
             <h1>Encuentra las parejas</h1>
-            <div id="flip">Jornadas Culturales Día de Andalucía</div>
+
         </div>
 
     </header>
