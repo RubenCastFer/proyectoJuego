@@ -33,6 +33,7 @@
         body {
             background-image: url(images/mezquita.jpg);
             background-size: auto 100%;
+            background-attachment: fixed;
         }
 
         .btn-flotante {
