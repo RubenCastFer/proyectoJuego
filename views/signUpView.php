@@ -95,7 +95,7 @@
         <label for="floatingInput">Nombre</label>
       </div>
       
-      <p><input class="w-100 btn btn-lg btn-primary" type="submit" value="Entrar" /></p>
+      <p><input class="w-100 btn btn-lg btn-success" type="submit" value="Entrar" /></p>
       <div style="background-color: grey;">
         <?php echo $error;?>
       </div>
