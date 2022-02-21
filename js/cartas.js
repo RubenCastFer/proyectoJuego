@@ -3,15 +3,18 @@ var click = 0;
 var foto1;
 var foto2;
 
-var vida = sessionStorage.getItem("vida");
-var nivel = sessionStorage.getItem("nivel");
-var puntuacionFinal = sessionStorage.getItem("puntuacionFinal");
+// var vida = sessionStorage.getItem("vida");
+// var nivel = sessionStorage.getItem("nivel");
 
-// var vida =1;
-// var nivel =1;
-var puntuacion = 0;
-var intentos = 8;
-const limite = 0
+var puntuacionFinal= parseInt(sessionStorage.getItem("puntuacionFinal"));
+var vida =1;
+var nivel =1;
+var puntuacion = 100;
+
+// var intentos = sessionStorage.getItem("intentos");
+// intentos=parseInt(intentos,10);
+var intentos=1;
+const limite = 0;
 
 
 
@@ -109,15 +112,17 @@ $(function () {
                                         swal("A la siguiente ronda", "mastodonte", "success");
                                         sessionStorage.setItem("vida", vida);
                                         sessionStorage.setItem("nivel", ++nivel);
+                                        
                                         puntuacionFinal = puntuacionFinal + puntuacion;
+                                        console.log(puntuacionFinal);
                                         sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
+                                        
+                                        intentos = sessionStorage.getItem("intentos");
+                                        intentos = parseInt(intentos) + 2;
+                                        sessionStorage.setItem("intentos", intentos);
 
 
-                                        if (nivel > 1) {
-                                            intentos = 12;
-                                        } else {
-                                            intentos = 8;
-                                        }
+
 
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
@@ -156,15 +161,17 @@ $(function () {
 
 
                                             sessionStorage.setItem("vida", --vida);
-                                            sessionStorage.setItem("nivel", "1");
+                                            sessionStorage.setItem("nivel", nivel);
+                                            console.log(puntuacionFinal);
                                             puntuacionFinal = puntuacionFinal + puntuacion;
+                                            console.log(puntuacionFinal);
                                             sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
+                                            
                                             if (vida == 0) {
                                                 // no funciona arreglar q guarde puntuacion en tabla
     
                                                 document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
                                                 setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
-    
     
                                             } else{
                                                 setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);

@@ -62,10 +62,7 @@ function updatePuntuacionUser($usuario, $puntuacion)
 
         $db = crearConexion();
 
-        $sql = $db->prepare("UPDATE puntuacion 
-                                SET puntuacion=? 
-                                WHERE usuario = ? 
-                                ");
+        $sql = $db->prepare("UPDATE `puntuacion` SET `puntuacion`=? WHERE usuario = ?");
 
         $sql->bindParam(1, $puntuacion);
         $sql->bindParam(2, $usuario);

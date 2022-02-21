@@ -17,6 +17,10 @@ function listarPuntuaciones()
     if(isset($_COOKIE["puntuacionFinal"])) {
         
         $puntuacion=$_COOKIE["puntuacionFinal"];
+        var_dump($puntuacion);
+        $puntuacion=intval($puntuacion);
+        var_dump($puntuacion);
+        var_dump($usuario);
         updatePuntuacionUser($usuario, $puntuacion);
         
     }

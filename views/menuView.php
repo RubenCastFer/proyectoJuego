@@ -141,6 +141,8 @@
                     sessionStorage.setItem("vida", "3");
                     sessionStorage.setItem("nivel", "1");
                     sessionStorage.setItem("puntuacionFinal", "0");
+                    sessionStorage.setItem("intentos", "8");
+
                 </script>
 
 
