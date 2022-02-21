@@ -114,7 +114,7 @@ $(function () {
                                         sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
                                         
                                         intentos = sessionStorage.getItem("intentos");
-                                        intentos = parseInt(intentos) + 2;
+                                        intentos = parseInt(intentos) + 8;
                                         sessionStorage.setItem("intentos", intentos);
 
 
@@ -123,11 +123,13 @@ $(function () {
 
 
                                         if (nivel > 3) {
+                                        document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
-                                        } 
+                                        } else {
+                                            setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+                                        }
                                         
 
-                                        setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
                                     }
 
