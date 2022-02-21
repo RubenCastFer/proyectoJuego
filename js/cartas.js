@@ -123,6 +123,13 @@ $(function () {
 
 
 
+                                        console.log(nivel);
+
+
+                                        if (nivel > 3) {
+                                        setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
+                                        } 
+                                        
 
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
