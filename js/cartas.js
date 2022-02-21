@@ -111,13 +111,13 @@ $(function () {
                                         sessionStorage.setItem("nivel", ++nivel);
                                         puntuacionFinal = puntuacionFinal + puntuacion;
                                         sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
+                                        console.log(nivel);
 
 
-                                        if (nivel > 1) {
-                                            intentos = 12;
-                                        } else {
-                                            intentos = 8;
-                                        }
+                                        if (nivel > 3) {
+                                        setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
+                                        } 
+                                        
 
                                         setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
 
