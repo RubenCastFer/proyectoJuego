@@ -6,7 +6,7 @@ var foto2;
 var vida = sessionStorage.getItem("vida");
 var nivel = sessionStorage.getItem("nivel");
 
-var puntuacionFinal= parseInt(sessionStorage.getItem("puntuacionFinal"));
+var puntuacionFinal = parseInt(sessionStorage.getItem("puntuacionFinal"));
 var puntuacion = 0;
 
 var intentos = sessionStorage.getItem("intentos");
@@ -49,20 +49,35 @@ $(function () {
 
             var cuerpo = $("#mostrar");
 
-            var div1 = $("<div>", { "class": "row centrar" });
+            var div1 = $("<div>", {
+                "class": "row centrar"
+            });
             cuerpo.append(div1);
 
             for (let i = 0; i < json.length; i++) {
 
-                var div2 = $("<div>", { "class": " col  m-2 card-grid" });
+                var div2 = $("<div>", {
+                    "class": " col  m-2 card-grid"
+                });
                 div1.append(div2);
 
-                var divImg1 = $("<div>", { "class": "frente tam oculto" })
-                var img1 = $("<img>", { "src": json[i].img, "class": "w-100 h-100 " + json[i].id, "alt": json[i].name })
+                var divImg1 = $("<div>", {
+                    "class": "frente tam oculto"
+                })
+                var img1 = $("<img>", {
+                    "src": json[i].img,
+                    "class": "w-100 h-100 " + json[i].id,
+                    "alt": json[i].name
+                })
                 divImg1.append(img1);
 
-                var divImg2 = $("<div>", { "class": "atras tam visible" })
-                var img2 = $("<img>", { "src": "./img/andalucia.png", "class": "w-100 h-100" })
+                var divImg2 = $("<div>", {
+                    "class": "atras tam visible"
+                })
+                var img2 = $("<img>", {
+                    "src": "./img/andalucia.png",
+                    "class": "w-100 h-100"
+                })
                 divImg2.append(img2);
 
                 div2.append(divImg2);
@@ -85,11 +100,11 @@ $(function () {
                             $(this).parent().next().addClass("visible")
                             if (click == 1) {
                                 foto1 = $(this).parent().next().children();
-                                //console.log(click);
+                               
                             } else if (click == 2) {
-                                //console.log(click);
+                                
                                 click = 0;
-                                //console.log(click);
+
                                 foto2 = $(this).parent().next().children();
 
                                 //Comparo que las dos fotos vueltas sean iguales
@@ -103,39 +118,34 @@ $(function () {
                                     liPunt.innerHTML = "Puntuación " + puntuacion;
 
                                     if (puntuacion == cantidad) {
-                                        //no esta saltando
+                                      
                                         alert("has pasado de nivel, mastodonte");
-                                        swal("A la siguiente ronda", "mastodonte", "success");
+                                      /*  swal("A la siguiente ronda", "mastodonte", "success"); */
                                         sessionStorage.setItem("vida", vida);
                                         sessionStorage.setItem("nivel", ++nivel);
-                                        
+
                                         puntuacionFinal = puntuacionFinal + puntuacion;
-                                        console.log(puntuacionFinal);
+                                      
                                         sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
-                                        
+
                                         intentos = sessionStorage.getItem("intentos");
                                         intentos = parseInt(intentos) + 8;
                                         sessionStorage.setItem("intentos", intentos);
 
-
-
-                                        console.log(nivel);
-
-
                                         if (nivel > 3) {
-                                        document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
-                                        setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
+                                            document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
+                                            setTimeout(function () {
+                                                window.location.href = "index.php?controller=juego&action=listarPuntuaciones";
+                                            }, 2000);
                                         } else {
-                                            setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+                                            setTimeout(function () {
+                                                window.location.href = "index.php?controller=juego&action=cartas";
+                                            }, 2000);
                                         }
-                                        
-
 
                                     }
-
-
                                     swal(foto1.attr("alt"));
-                                    //añadir puntuacion y un span con el nombre;
+
 
 
 
@@ -171,19 +181,23 @@ $(function () {
                                             puntuacionFinal = puntuacionFinal + puntuacion;
                                             console.log(puntuacionFinal);
                                             sessionStorage.setItem("puntuacionFinal", puntuacionFinal);
-                                            
+
                                             if (vida == 0) {
                                                 // no funciona arreglar q guarde puntuacion en tabla
-    
+
                                                 document.cookie = "puntuacionFinal" + "=" + puntuacionFinal;
-                                                setTimeout(function () { window.location.href = "index.php?controller=juego&action=listarPuntuaciones"; }, 2000);
-    
-                                            } else{
-                                                setTimeout(function () { window.location.href = "index.php?controller=juego&action=cartas"; }, 2000);
+                                                setTimeout(function () {
+                                                    window.location.href = "index.php?controller=juego&action=listarPuntuaciones";
+                                                }, 2000);
+
+                                            } else {
+                                                setTimeout(function () {
+                                                    window.location.href = "index.php?controller=juego&action=cartas";
+                                                }, 2000);
                                             }
                                         }
 
-                                        
+
                                         //quitar intento y si los intentos llegan a 0 restar una vida
                                     }, 1000);
                                 }

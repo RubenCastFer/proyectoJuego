@@ -15,10 +15,14 @@
     <script src="./js/cartas.js" type="text/javascript"></script>
     <title>Panel</title>
     <style>
+
         h1 {
             font-size: 65px;
         }
 
+        #boton{
+            margin-top: 2px;
+        }
         .centrar {
             display: flex;
             align-items: center;
@@ -78,7 +82,7 @@
         footer {
             text-align: center;
             background-color: #52BE80;
-            padding: 20px;
+            padding: 10px;
 
         }
 
@@ -135,7 +139,10 @@
 
 <body>
     <header class="container-fluid ">
+        <a type="button" id="boton" class="btn btn-danger btn-circle btn-xl btn-outline-light" href='index.php?controller=usuarios&action=cerrarSesion'>Salir</a>
+        <a type="button" id="boton" class="btn btn-primary  btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=menu'>Menú</a>
         <div class="col-12 ">
+
             <h1>Encuentra las parejas</h1>
 
         </div>
