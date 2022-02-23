@@ -16,6 +16,9 @@
 
 
   <style>
+    h1, h3 {
+      color: white;
+    }
     .container {
       background-image: url(images/catedralygiralda.jpg);
       background-size: auto 100%;
@@ -87,15 +90,16 @@
   
   <main class="form-signin">
     <form action="index.php?controller=usuarios&action=signUp" method="POST">
-      <h1 class="text-decoration-underline">Memory game</h1><br>
-      <h1 class="h3 mb-3 fw-normal">Inserta tu nombre para jugar!</h1>
+      <h1 class="text-decoration-underline">MonuMemory</h1><br>
+      <h3 class="h3 mb-3 fw-normal">Inserta tu nombre para jugar!</h3>
 
       <div class="form-floating">
         <input type="text" name="usuario" class="form-control opacity-75" id="floatingInput" placeholder="Usuario" required>
         <label for="floatingInput">Nombre</label>
       </div>
+      <br>
       
-      <p><input class="w-100 btn btn-lg btn-success" type="submit" value="Entrar" /></p>
+      <p><input class="w-100 btn btn-lg btn-success btn-outline-light" type="submit" value="Entrar" /></p>
       <div style="background-color: grey;">
         <?php echo $error;?>
       </div>

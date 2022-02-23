@@ -139,8 +139,8 @@
 
 <body>
     <header class="container-fluid ">
-        <a type="button" id="boton" class="btn btn-danger btn-circle btn-xl btn-outline-light" href='index.php?controller=usuarios&action=cerrarSesion'>Salir</a>
-        <a type="button" id="boton" class="btn btn-primary  btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=menu'>Menú</a>
+        <a type="button" id="boton" class="btn btn-success  btn-md btn-outline-light" href='index.php?controller=usuarios&action=cerrarSesion'>Salir</a>
+        <a type="button" id="boton" class="btn btn-success  btn-md btn-outline-light" href='index.php?controller=juego&action=menu'>Menú</a>
         <div class="col-12 ">
 
             <h1>Encuentra las parejas</h1>
@@ -148,7 +148,7 @@
         </div>
 
     </header>
-    <div class="container-fluid mr-5 mr-lg-4 col-md-9" id="mostrar" height="100%">
+    <div class="container-fluid mr-5 col-sm-4 col-md-10 mr-lg-12 col-xl-12 " id="mostrar" height="100%">
 
     </div>
 

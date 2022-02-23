@@ -125,11 +125,11 @@
                         <div class="row justify-content-center align-items-center">
                             <img src="images/escudo.png" id="escudo" class="inline-block m-auto pt-3">
 
-                            <a type="button" class="btn btn-primary btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=cartas'><span>Jugar</span></a>
+                            <a type="button" class="btn btn-success btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=cartas'><span>Jugar</span></a>
 
-                            <a type="button" class="btn btn-secondary btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=listarPuntuaciones'>Puntos</a>
+                            <a type="button" class="btn btn-success btn-circle btn-xl btn-outline-light" href='index.php?controller=juego&action=listarPuntuaciones'>Puntos</a>
 
-                            <a type="button" class="btn btn-danger btn-circle btn-xl btn-outline-light" href='index.php?controller=usuarios&action=cerrarSesion'>Salir</a>
+                            <a type="button" class="btn btn-success btn-circle btn-xl btn-outline-light" href='index.php?controller=usuarios&action=cerrarSesion'>Salir</a>
 
                             <img src="images/escudo.png" id="escudo" class="inline-block m-auto pt-3">
                         </div>
