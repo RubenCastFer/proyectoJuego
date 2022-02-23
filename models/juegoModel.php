@@ -224,6 +224,11 @@ $nivel2 = [
         "img" => "./img/catedral_jerez.jpg",
         "id" => 7
     ],
+    [
+        "name" => " Torre del Oro (Sevilla)",
+        "img" => "./img/torredeloro.jpg",
+        "id" => 9
+    ],
 
     [
         "name" => "La Alcazaba de Málaga",
@@ -241,6 +246,12 @@ $nivel2 = [
         "name" => "El Castillo de Jaén",
         "img" => "./img/castillo_jaen.jpg",
         "id" => 8
+    ],
+
+    [
+        "name" => " Torre del Oro (Sevilla)",
+        "img" => "./img/torredeloro.jpg",
+        "id" => 9
     ]
 ];
 
